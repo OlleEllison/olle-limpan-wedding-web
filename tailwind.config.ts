@@ -22,6 +22,7 @@ export default {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+          light: "hsl(var(--primary-light))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
@@ -46,6 +47,12 @@ export default {
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
+        },
+        wedding: {
+          pink: "hsl(var(--wedding-pink))",
+          navy: "hsl(var(--wedding-navy))",
+          cream: "hsl(var(--wedding-cream))",
+          gold: "hsl(var(--wedding-gold))",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
@@ -84,6 +91,17 @@ export default {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "floating-hearts": "floating-hearts 20s linear infinite",
+        "fade-in": "fade-in 0.5s ease-out",
+        "slide-up": "slide-up 0.6s ease-out",
+      },
+      fontFamily: {
+        handwritten: ['Dancing Script', 'cursive'],
+        sans: ['Inter', 'sans-serif'],
+      },
+      backgroundImage: {
+        'gradient-romantic': 'var(--gradient-romantic)',
+        'gradient-soft': 'var(--gradient-soft)',
       },
     },
   },
