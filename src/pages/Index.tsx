@@ -11,7 +11,7 @@ const Index = () => {
   // Handle scroll to update active section
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'presents', 'details', 'rsvp'];
+      const sections = ['home', 'details', 'rsvp', 'presents'];
       const scrollPosition = window.scrollY + 100;
 
       for (const section of sections) {
@@ -43,9 +43,9 @@ const Index = () => {
       
       <main className="pt-16">
         <HeroSection onRSVPClick={handleRSVPClick} />
-        <PresentsSection />
         <DetailsSection />
         <RSVPSection />
+        <PresentsSection />
       </main>
     </div>
   );

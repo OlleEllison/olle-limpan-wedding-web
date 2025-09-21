@@ -22,7 +22,7 @@ export const PresentsSection: React.FC = () => {
               <h3 className="font-handwritten text-3xl text-primary">
                 Kära vänner och familj
               </h3>
-              <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
+              <p className="font-handwritten text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
                 Er närvaro på vår bröllopsdag är verkligen den bästa presenten vi kan få. 
                 Om ni ändå vill ge oss något, skulle vi vara så tacksamma för bidrag till 
                 vår smekmånad eller något från våra önskelistor nedan.

@@ -13,7 +13,6 @@ export const Navigation: React.FC<NavigationProps> = ({ activeSection, onSection
 
   const menuItems = [
     { id: 'home', label: 'Start', icon: Heart },
-    { id: 'presents', label: 'Presenter?', icon: Heart },
     { id: 'details', label: 'Detaljer', icon: Heart },
     { id: 'rsvp', label: 'OSA', icon: Heart },
   ];
