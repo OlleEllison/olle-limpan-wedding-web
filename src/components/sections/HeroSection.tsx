@@ -1,7 +1,10 @@
 import React from 'react';
-import { Calendar, MapPin } from 'lucide-react';
+import { Calendar } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { WeddingRings } from '../WeddingRings';
+import coupleImage from '@/assets/couple-image.png';
+import speechBubble from '@/assets/speech-bubble.png';
+import dateImage from '@/assets/date-image.png';
 
 interface HeroSectionProps {
   onRSVPClick: () => void;
@@ -34,41 +37,57 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onRSVPClick }) => {
             </p>
           </div>
 
-          {/* Wedding Date & Location */}
-          <div className="space-y-6">
-            <div className="inline-block bg-card border-2 border-primary/20 rounded-2xl p-6 shadow-lg">
-              <h2 className="font-handwritten text-4xl md:text-5xl text-secondary mb-2">
-                15 Augusti 2026
-              </h2>
-              <div className="flex items-center justify-center space-x-2 text-muted-foreground">
-                <MapPin size={20} />
-                <span className="text-lg">Vaddo</span>
+          {/* Couple Image with Speech Bubbles */}
+          <div className="relative flex justify-center items-center my-12">
+            {/* Left Speech Bubble */}
+            <div className="absolute -left-20 md:-left-32 top-8 z-10">
+              <div className="bg-white border-2 border-black rounded-lg p-3 relative">
+                <p className="font-handwritten text-lg text-black">Mer info kommer!</p>
+                <div className="absolute bottom-0 right-4 w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-t-[10px] border-t-white"></div>
+                <div className="absolute bottom-[-2px] right-4 w-0 h-0 border-l-[12px] border-l-transparent border-r-[12px] border-r-transparent border-t-[12px] border-t-black"></div>
               </div>
             </div>
 
-            {/* Countdown */}
-            <div className="bg-gradient-romantic text-white rounded-2xl p-6 shadow-xl">
-              <h3 className="font-handwritten text-3xl mb-2">Nedräkning</h3>
-              <p className="text-4xl font-bold">{daysLeft} dagar kvar</p>
+            {/* Couple Image */}
+            <div className="relative">
+              <img 
+                src={coupleImage} 
+                alt="Ellison och Olle" 
+                className="w-80 h-auto rounded-lg shadow-lg"
+              />
+            </div>
+
+            {/* Right Speech Bubble */}
+            <div className="absolute -right-20 md:-right-32 top-8 z-10">
+              <div className="bg-white border-2 border-black rounded-lg p-3 relative">
+                <p className="font-handwritten text-lg text-black">Kom igen det blir kul!</p>
+                <div className="absolute bottom-0 left-4 w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-t-[10px] border-t-white"></div>
+                <div className="absolute bottom-[-2px] left-4 w-0 h-0 border-l-[12px] border-l-transparent border-r-[12px] border-r-transparent border-t-[12px] border-t-black"></div>
+              </div>
             </div>
           </div>
 
-          {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button 
-              size="lg" 
-              className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
-              onClick={onRSVPClick}
-            >
-              OSA Här
-            </Button>
-            
+          {/* Wedding Date */}
+          <div className="flex justify-center">
+            <img 
+              src={dateImage} 
+              alt="15 Augusti 2026 Vaddo" 
+              className="w-auto h-32"
+            />
+          </div>
+
+          {/* Countdown */}
+          <div className="bg-gradient-romantic text-white rounded-2xl p-6 shadow-xl">
+            <p className="text-4xl font-bold font-handwritten">{daysLeft} dagar kvar</p>
+          </div>
+
+          {/* Action Button */}
+          <div className="flex justify-center">
             <Button 
               variant="outline" 
               size="lg" 
               className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
               onClick={() => {
-                // Add to calendar functionality
                 const calendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=Ellison%20%26%20Olles%20Bröllop&dates=20260815T150000Z/20260815T230000Z&location=Vaddo&details=Kom%20och%20fira%20oss!`;
                 window.open(calendarUrl, '_blank');
               }}
@@ -76,15 +95,6 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onRSVPClick }) => {
               <Calendar className="mr-2" size={20} />
               Lägg till i din kalender
             </Button>
-          </div>
-
-          {/* Playful Message */}
-          <div className="mt-12">
-            <div className="inline-block bg-wedding-cream border-2 border-dashed border-primary/30 rounded-2xl p-4 transform rotate-1 shadow-lg">
-              <p className="font-handwritten text-2xl text-primary">
-                Kom igen, det blir kul!
-              </p>
-            </div>
           </div>
         </div>
       </div>
