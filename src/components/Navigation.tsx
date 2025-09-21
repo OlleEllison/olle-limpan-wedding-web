@@ -12,11 +12,9 @@ export const Navigation: React.FC<NavigationProps> = ({ activeSection, onSection
   const [isOpen, setIsOpen] = useState(false);
 
   const menuItems = [
-    { id: 'home', label: 'Hem', icon: Heart },
-    { id: 'story', label: 'Vår Historia', icon: Heart },
+    { id: 'home', label: 'Start', icon: Heart },
     { id: 'details', label: 'Detaljer', icon: Heart },
     { id: 'rsvp', label: 'OSA', icon: Heart },
-    { id: 'registry', label: 'Önskelista', icon: Heart },
   ];
 
   const handleMenuClick = (sectionId: string) => {
@@ -38,7 +36,6 @@ export const Navigation: React.FC<NavigationProps> = ({ activeSection, onSection
           {/* Logo */}
           <div className="flex items-center space-x-2">
             <WeddingRings size={32} />
-            <span className="font-handwritten text-2xl text-primary">E & O</span>
           </div>
 
           {/* Desktop Menu */}
