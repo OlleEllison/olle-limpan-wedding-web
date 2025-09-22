@@ -1,5 +1,5 @@
 import React from 'react';
-import { Clock, MapPin, Camera, Music, Utensils, Gift } from 'lucide-react';
+import { Clock, MapPin, Shirt, Music, Utensils, Gift } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 export const DetailsSection: React.FC = () => {
@@ -27,17 +27,6 @@ export const DetailsSection: React.FC = () => {
       ]
     },
     {
-      icon: Camera,
-      title: 'Fotografering',
-      content: [
-        'Professionell fotograf',
-        'Gruppbilder efter vigsel',
-        'Dela era egna bilder!',
-        '#EllisionOllesBröllop',
-        'Vi älskar era perspektiv'
-      ]
-    },
-    {
       icon: Utensils,
       title: 'Mat & Dryck',
       content: [
@@ -49,7 +38,7 @@ export const DetailsSection: React.FC = () => {
       ]
     },
     {
-      icon: Music,
+      icon: Shirt,
       title: 'Klädkod',
       content: [
         'Kavaj för herrar',
@@ -78,7 +67,7 @@ export const DetailsSection: React.FC = () => {
         <div className="max-w-6xl mx-auto space-y-12">
           {/* Section Header */}
           <div className="text-center space-y-4">
-            <h2 className="font-handwritten text-5xl md:text-6xl text-primary">
+            <h2 className="font-handwritten text-5xl md:text-6xl text-black">
               Bröllopsdetaljer
             </h2>
             <p className="text-xl text-muted-foreground">
@@ -97,7 +86,7 @@ export const DetailsSection: React.FC = () => {
                   <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                     <detail.icon className="text-primary" size={24} />
                   </div>
-                  <CardTitle className="font-handwritten text-2xl text-secondary">
+                  <CardTitle className="font-handwritten text-2xl text-black">
                     {detail.title}
                   </CardTitle>
                 </CardHeader>
@@ -119,33 +108,33 @@ export const DetailsSection: React.FC = () => {
 
           {/* Important Notes */}
           <div className="bg-gradient-soft rounded-2xl p-8 text-center space-y-4 border-2 border-primary/20">
-            <h3 className="font-handwritten text-3xl text-primary">
+            <h3 className="font-handwritten text-3xl text-black">
               Viktigt att komma ihåg
             </h3>
             <div className="grid md:grid-cols-2 gap-6 text-left max-w-4xl mx-auto">
               <div className="space-y-2">
-                <h4 className="font-semibold text-secondary">Transport</h4>
+                <h4 className="font-semibold text-black">Transport</h4>
                 <p className="text-muted-foreground text-sm">
                   Buss kommer att arrangeras från Stockholm. 
                   Mer information kommer via e-post.
                 </p>
               </div>
               <div className="space-y-2">
-                <h4 className="font-semibold text-secondary">Boende</h4>
+                <h4 className="font-semibold text-black">Boende</h4>
                 <p className="text-muted-foreground text-sm">
                   Rekommenderade hotell och B&B i området 
                   finns listade på vår önskelista-sida.
                 </p>
               </div>
               <div className="space-y-2">
-                <h4 className="font-semibold text-secondary">Väder</h4>
+                <h4 className="font-semibold text-black">Väder</h4>
                 <p className="text-muted-foreground text-sm">
                   Ta med en kofta för kvällen och bekväma skor. 
                   Paraply kan vara bra att ha till hands!
                 </p>
               </div>
               <div className="space-y-2">
-                <h4 className="font-semibold text-secondary">Kontakt</h4>
+                <h4 className="font-semibold text-black">Kontakt</h4>
                 <p className="text-muted-foreground text-sm">
                   Har ni frågor? Kontakta oss eller våra toastmasters 
                   [namn] på [telefon].

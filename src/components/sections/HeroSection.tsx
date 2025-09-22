@@ -3,7 +3,7 @@ import { Calendar } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { WeddingRings } from '../WeddingRings';
 import coupleImage from '@/assets/couple-image.png';
-import dateImage from '@/assets/date-image.png';
+import newCoupleImage from '@/assets/couple-new.png';
 
 interface HeroSectionProps {
   onRSVPClick: () => void;
@@ -33,10 +33,19 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onRSVPClick }) => {
             </h1>
           </div>
 
+          {/* New Couple Image */}
+          <div className="flex justify-center my-8">
+            <img 
+              src={newCoupleImage} 
+              alt="Ellison och Olle" 
+              className="w-64 md:w-80 h-auto rounded-lg shadow-xl"
+            />
+          </div>
+
           {/* Couple Image with Speech Bubbles */}
           <div className="relative flex justify-center items-center my-12 px-8">
             {/* Left Speech Bubble - "Mer info kommer!" */}
-            <div className="absolute left-0 md:left-8 top-4 z-10 transform -rotate-12">
+            <div className="absolute left-8 md:left-16 top-4 z-10 transform -rotate-12">
               <div className="bg-white border-2 border-black rounded-lg px-4 py-2 relative shadow-lg">
                 <p className="font-handwritten text-base md:text-lg text-black whitespace-nowrap">Mer info kommer!</p>
                 <div className="absolute bottom-[-8px] right-6 w-0 h-0 border-l-[8px] border-l-transparent border-r-[8px] border-r-transparent border-t-[8px] border-t-white"></div>
@@ -54,7 +63,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onRSVPClick }) => {
             </div>
 
             {/* Right Speech Bubble - "Kom igen det blir kul!" */}
-            <div className="absolute right-0 md:right-8 top-4 z-10 transform rotate-12">
+            <div className="absolute right-8 md:right-16 top-4 z-10 transform rotate-12">
               <div className="bg-white border-2 border-black rounded-lg px-4 py-2 relative shadow-lg">
                 <p className="font-handwritten text-base md:text-lg text-black whitespace-nowrap">Kom igen det blir kul!</p>
                 <div className="absolute bottom-[-8px] left-6 w-0 h-0 border-l-[8px] border-l-transparent border-r-[8px] border-r-transparent border-t-[8px] border-t-white"></div>
@@ -64,12 +73,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onRSVPClick }) => {
           </div>
 
           {/* Wedding Date */}
-          <div className="flex justify-center">
-            <img 
-              src={dateImage} 
-              alt="15 Augusti 2026 Vaddo" 
-              className="w-auto h-24 md:h-32"
-            />
+          <div className="text-center my-8">
+            <p className="font-handwritten text-4xl md:text-5xl text-primary">15 Augusti 2026 Vaddo</p>
           </div>
 
           {/* Countdown */}

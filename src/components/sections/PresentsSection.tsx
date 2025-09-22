@@ -8,7 +8,7 @@ export const PresentsSection: React.FC = () => {
         <div className="max-w-4xl mx-auto space-y-12">
           {/* Section Header */}
           <div className="text-center space-y-4">
-            <h2 className="font-handwritten text-5xl md:text-6xl text-primary">
+            <h2 className="font-handwritten text-5xl md:text-6xl text-black">
               Presenter?
             </h2>
           </div>
@@ -19,7 +19,7 @@ export const PresentsSection: React.FC = () => {
               <Heart className="text-primary" size={32} />
             </div>
             <div className="space-y-4">
-              <h3 className="font-handwritten text-3xl text-primary">
+              <h3 className="font-handwritten text-3xl text-black">
                 Kära vänner och familj
               </h3>
               <p className="font-handwritten text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
