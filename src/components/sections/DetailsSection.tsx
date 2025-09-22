@@ -1,5 +1,5 @@
 import React from 'react';
-import { Clock, MapPin, Shirt, Music, Utensils, Gift } from 'lucide-react';
+import { Clock, MapPin, Shirt, Music, Utensils, AlertTriangle, Gift } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 export const DetailsSection: React.FC = () => {
@@ -49,7 +49,7 @@ export const DetailsSection: React.FC = () => {
       ]
     },
     {
-      icon: Gift,
+      icon: AlertTriangle,
       title: 'Viktigt att komma ihåg',
       content: [
         'Buss från Stockholm arrangeras',
@@ -57,6 +57,17 @@ export const DetailsSection: React.FC = () => {
         'Ta med kofta för kvällen',
         'Bekväma skor rekommenderas',
         'Frågor? Kontakta oss!'
+      ]
+    },
+    {
+      icon: Gift,
+      title: 'Önskningar',
+      content: [
+        'Er närvaro är det bästa',
+        'Bidrag till smekmånad',
+        'Swish: [nummer]',
+        'Eller se önskelista',
+        'Tack för er generositet!'
       ]
     }
   ];
