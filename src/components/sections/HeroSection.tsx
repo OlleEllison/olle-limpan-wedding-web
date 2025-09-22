@@ -10,7 +10,7 @@ interface HeroSectionProps {
 }
 
 export const HeroSection: React.FC<HeroSectionProps> = ({ onRSVPClick }) => {
-  const weddingDate = new Date('2026-08-15');
+  const weddingDate = new Date('2025-08-15');
   const now = new Date();
   const daysLeft = Math.ceil((weddingDate.getTime() - now.getTime()) / (1000 * 60 * 60 * 24));
 
@@ -33,19 +33,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onRSVPClick }) => {
             </h1>
           </div>
 
-          {/* New Couple Image */}
-          <div className="flex justify-center my-8">
-            <img 
-              src={newCoupleImage} 
-              alt="Ellison och Olle" 
-              className="w-64 md:w-80 h-auto rounded-lg shadow-xl"
-            />
-          </div>
-
-          {/* Couple Image with Speech Bubbles */}
-          <div className="relative flex justify-center items-center my-12 px-8">
-            {/* Left Speech Bubble - "Mer info kommer!" */}
-            <div className="absolute left-8 md:left-16 top-4 z-10 transform -rotate-12">
+          {/* New Couple Image with Speech Bubbles */}
+          <div className="relative flex justify-center items-center my-12">
+            {/* Left Speech Bubble - positioned at top left corner */}
+            <div className="absolute left-8 top-0 z-10 transform -rotate-12">
               <div className="bg-white border-2 border-black rounded-lg px-4 py-2 relative shadow-lg">
                 <p className="font-handwritten text-base md:text-lg text-black whitespace-nowrap">Mer info kommer!</p>
                 <div className="absolute bottom-[-8px] right-6 w-0 h-0 border-l-[8px] border-l-transparent border-r-[8px] border-r-transparent border-t-[8px] border-t-white"></div>
@@ -53,17 +44,21 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onRSVPClick }) => {
               </div>
             </div>
 
-            {/* Couple Image */}
-            <div className="relative mx-8">
+            {/* Couple Image with transparent background effect */}
+            <div className="relative">
               <img 
-                src={coupleImage} 
+                src={newCoupleImage} 
                 alt="Ellison och Olle" 
-                className="w-64 md:w-80 h-auto rounded-lg shadow-xl"
+                className="w-64 md:w-80 h-auto rounded-lg shadow-xl bg-white"
+                style={{ 
+                  maskImage: 'radial-gradient(ellipse at center, black 60%, transparent 70%)',
+                  WebkitMaskImage: 'radial-gradient(ellipse at center, black 60%, transparent 70%)'
+                }}
               />
             </div>
 
-            {/* Right Speech Bubble - "Kom igen det blir kul!" */}
-            <div className="absolute right-8 md:right-16 top-4 z-10 transform rotate-12">
+            {/* Right Speech Bubble - positioned at top right corner */}
+            <div className="absolute right-8 top-0 z-10 transform rotate-12">
               <div className="bg-white border-2 border-black rounded-lg px-4 py-2 relative shadow-lg">
                 <p className="font-handwritten text-base md:text-lg text-black whitespace-nowrap">Kom igen det blir kul!</p>
                 <div className="absolute bottom-[-8px] left-6 w-0 h-0 border-l-[8px] border-l-transparent border-r-[8px] border-r-transparent border-t-[8px] border-t-white"></div>
@@ -72,9 +67,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onRSVPClick }) => {
             </div>
           </div>
 
-          {/* Wedding Date */}
+          {/* Wedding Date - Minimalistic */}
           <div className="text-center my-8">
-            <p className="font-handwritten text-4xl md:text-5xl text-primary">15 Augusti 2026 Vaddo</p>
+            <p className="text-4xl md:text-5xl text-black font-light">15 Augusti 2025</p>
+            <p className="text-xl md:text-2xl text-muted-foreground mt-2">Vaddo</p>
           </div>
 
           {/* Countdown */}
@@ -82,20 +78,27 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onRSVPClick }) => {
             <p className="text-3xl md:text-4xl font-bold font-handwritten">{daysLeft} dagar kvar</p>
           </div>
 
-          {/* Action Button */}
+          {/* Calendar Date Picker */}
           <div className="flex justify-center">
-            <Button 
-              variant="outline" 
-              size="lg" 
-              className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 font-handwritten"
-              onClick={() => {
-                const calendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=Ellison%20%26%20Olles%20Bröllop&dates=20260815T150000Z/20260815T230000Z&location=Vaddo&details=Kom%20och%20fira%20oss!`;
-                window.open(calendarUrl, '_blank');
-              }}
-            >
-              <Calendar className="mr-2" size={20} />
-              Lägg till i din kalender
-            </Button>
+            <div className="bg-white border-2 border-primary rounded-lg p-6 shadow-xl">
+              <div className="text-center">
+                <div className="text-sm text-muted-foreground mb-2">AUGUSTI</div>
+                <div className="text-6xl font-bold text-primary mb-2">15</div>
+                <div className="text-sm text-muted-foreground mb-4">FREDAG</div>
+                <Button 
+                  variant="outline" 
+                  size="sm" 
+                  className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                  onClick={() => {
+                    const calendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=Ellison%20%26%20Olles%20Bröllop&dates=20250815T150000Z/20250815T230000Z&location=Vaddo&details=Kom%20och%20fira%20oss!`;
+                    window.open(calendarUrl, '_blank');
+                  }}
+                >
+                  <Calendar className="mr-2" size={16} />
+                  Lägg till i kalender
+                </Button>
+              </div>
+            </div>
           </div>
         </div>
       </div>

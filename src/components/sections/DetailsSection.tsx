@@ -50,13 +50,13 @@ export const DetailsSection: React.FC = () => {
     },
     {
       icon: Gift,
-      title: 'Önskningar',
+      title: 'Viktigt att komma ihåg',
       content: [
-        'Er närvaro är det bästa',
-        'Bidrag till smekmånad',
-        'Swish: [nummer]',
-        'Eller se önskelista',
-        'Tack för er generositet!'
+        'Buss från Stockholm arrangeras',
+        'Hotell & B&B rekommendationer',
+        'Ta med kofta för kvällen',
+        'Bekväma skor rekommenderas',
+        'Frågor? Kontakta oss!'
       ]
     }
   ];
@@ -104,43 +104,6 @@ export const DetailsSection: React.FC = () => {
                 </CardContent>
               </Card>
             ))}
-          </div>
-
-          {/* Important Notes */}
-          <div className="bg-gradient-soft rounded-2xl p-8 text-center space-y-4 border-2 border-primary/20">
-            <h3 className="font-handwritten text-3xl text-black">
-              Viktigt att komma ihåg
-            </h3>
-            <div className="grid md:grid-cols-2 gap-6 text-left max-w-4xl mx-auto">
-              <div className="space-y-2">
-                <h4 className="font-semibold text-black">Transport</h4>
-                <p className="text-muted-foreground text-sm">
-                  Buss kommer att arrangeras från Stockholm. 
-                  Mer information kommer via e-post.
-                </p>
-              </div>
-              <div className="space-y-2">
-                <h4 className="font-semibold text-black">Boende</h4>
-                <p className="text-muted-foreground text-sm">
-                  Rekommenderade hotell och B&B i området 
-                  finns listade på vår önskelista-sida.
-                </p>
-              </div>
-              <div className="space-y-2">
-                <h4 className="font-semibold text-black">Väder</h4>
-                <p className="text-muted-foreground text-sm">
-                  Ta med en kofta för kvällen och bekväma skor. 
-                  Paraply kan vara bra att ha till hands!
-                </p>
-              </div>
-              <div className="space-y-2">
-                <h4 className="font-semibold text-black">Kontakt</h4>
-                <p className="text-muted-foreground text-sm">
-                  Har ni frågor? Kontakta oss eller våra toastmasters 
-                  [namn] på [telefon].
-                </p>
-              </div>
-            </div>
           </div>
         </div>
       </div>

@@ -3,7 +3,6 @@ import { Navigation } from '@/components/Navigation';
 import { HeroSection } from '@/components/sections/HeroSection';
 import { DetailsSection } from '@/components/sections/DetailsSection';
 import { RSVPSection } from '@/components/sections/RSVPSection';
-import { PresentsSection } from '@/components/sections/PresentsSection';
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState('home');
@@ -11,7 +10,7 @@ const Index = () => {
   // Handle scroll to update active section
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'details', 'rsvp', 'presents'];
+      const sections = ['home', 'details', 'rsvp'];
       const scrollPosition = window.scrollY + 100;
 
       for (const section of sections) {
@@ -45,7 +44,6 @@ const Index = () => {
         <HeroSection onRSVPClick={handleRSVPClick} />
         <DetailsSection />
         <RSVPSection />
-        <PresentsSection />
       </main>
     </div>
   );
