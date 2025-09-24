@@ -47,7 +47,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onRSVPClick }) => {
             {/* Couple Image */}
             <div className="relative">
               <img 
-                src={coupleImage} 
+                src={newCoupleImage} 
                 alt="Ellison och Olle" 
                 className="w-64 md:w-80 h-auto rounded-lg shadow-xl"
               />
