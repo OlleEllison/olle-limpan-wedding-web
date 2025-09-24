@@ -2,6 +2,7 @@ import React from 'react';
 import { Calendar } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { WeddingRings } from '../WeddingRings';
+import { BlurredCoupleImage } from '../BlurredCoupleImage';
 import coupleImage from '@/assets/couple-image.png';
 import newCoupleImage from '@/assets/couple-new.png';
 
@@ -44,10 +45,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onRSVPClick }) => {
               </div>
             </div>
 
-            {/* Couple Image */}
+            {/* Couple Image with Blurred Background */}
             <div className="relative">
-              <img 
-                src={newCoupleImage} 
+              <BlurredCoupleImage 
                 alt="Ellison och Olle" 
                 className="w-64 md:w-80 h-auto rounded-lg shadow-xl"
               />
