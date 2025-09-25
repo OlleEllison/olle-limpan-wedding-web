@@ -18,22 +18,40 @@ export const RSVPSection: React.FC = () => {
     phone: '',
     attending: '',
     guestCount: '1',
+    allergies: '',
     dietaryRestrictions: '',
     accommodation: false,
     message: ''
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Here you would typically send the data to your backend
-    // For now, we'll just show a success message
-    setIsSubmitted(true);
-    
-    toast({
-      title: "Tack för ditt svar!",
-      description: "Vi har tagit emot din OSA och kommer att bekräfta via e-post.",
-    });
+    try {
+      const response = await fetch('/api/submit-rsvp', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);
+        toast({
+          title: "Tack för ditt svar!",
+          description: "Vi har tagit emot din OSA och kommer att bekräfta via e-post.",
+        });
+      } else {
+        throw new Error('Failed to submit RSVP');
+      }
+    } catch (error) {
+      toast({
+        title: "Ett fel uppstod",
+        description: "Kunde inte skicka ditt svar. Försök igen senare.",
+        variant: "destructive",
+      });
+    }
   };
 
   const handleInputChange = (field: string, value: string | boolean) => {
@@ -179,17 +197,34 @@ export const RSVPSection: React.FC = () => {
                   </div>
                 )}
 
+                {/* Allergies */}
+                {formData.attending === 'yes' && (
+                  <div className="space-y-2">
+                    <Label htmlFor="allergies" className="text-secondary font-medium">
+                      Allergier *
+                    </Label>
+                    <Textarea
+                      id="allergies"
+                      value={formData.allergies}
+                      onChange={(e) => handleInputChange('allergies', e.target.value)}
+                      placeholder="Beskriv eventuella allergier i detalj (t.ex. nötter, skaldjur, laktos)..."
+                      rows={3}
+                      className="border-2 border-border focus:border-primary resize-none"
+                    />
+                  </div>
+                )}
+
                 {/* Dietary Restrictions */}
                 {formData.attending === 'yes' && (
                   <div className="space-y-2">
                     <Label htmlFor="dietary" className="text-secondary font-medium">
-                      Matallergier eller specialkost
+                      Övrig specialkost
                     </Label>
                     <Input
                       id="dietary"
                       value={formData.dietaryRestrictions}
                       onChange={(e) => handleInputChange('dietaryRestrictions', e.target.value)}
-                      placeholder="T.ex. vegetarian, glutenfri, nötallergier..."
+                      placeholder="T.ex. vegetarian, vegansk, glutenfri..."
                       className="border-2 border-border focus:border-primary"
                     />
                   </div>
