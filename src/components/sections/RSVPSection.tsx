@@ -201,13 +201,13 @@ export const RSVPSection: React.FC = () => {
                 {formData.attending === 'yes' && (
                   <div className="space-y-2">
                     <Label htmlFor="allergies" className="text-secondary font-medium">
-                      Allergier *
+                      Allergier
                     </Label>
                     <Textarea
                       id="allergies"
                       value={formData.allergies}
                       onChange={(e) => handleInputChange('allergies', e.target.value)}
-                      placeholder="Beskriv eventuella allergier i detalj (t.ex. nötter, skaldjur, laktos)..."
+                      placeholder="Beskriv eventuella allergier i detalj (t.ex. nötter, skaldjur, laktos). Skriv 'Inga' om du inte har några allergier."
                       rows={3}
                       className="border-2 border-border focus:border-primary resize-none"
                     />
