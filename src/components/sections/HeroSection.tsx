@@ -76,7 +76,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onRSVPClick }) => {
 
           {/* Monthly Calendar View */}
           <div className="flex justify-center">
-            <div className="bg-gradient-to-br from-white to-gray-50 border-2 border-primary/20 rounded-3xl p-8 shadow-2xl w-full max-w-2xl">
+            <div className="bg-gradient-to-br from-white to-gray-50 border-2 border-primary/20 rounded-3xl p-8 shadow-2xl w-full">
               <div className="text-center mb-6">
                 <h3 className="font-handwritten text-3xl text-primary mb-2">Augusti 2026</h3>
                 <div className="w-16 h-1 bg-primary mx-auto rounded-full"></div>
