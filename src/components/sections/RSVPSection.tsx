@@ -23,9 +23,6 @@ export const RSVPSection: React.FC = () => {
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Heart className="text-primary" size={24} />
               </div>
-              <CardTitle className="font-handwritten text-3xl text-secondary">
-                Vi vill veta om du kommer!
-              </CardTitle>
             </CardHeader>
             <CardContent className="p-0">
               <div className="w-full overflow-hidden rounded-b-lg">
