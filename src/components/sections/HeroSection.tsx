@@ -111,8 +111,12 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onRSVPClick }) => {
                           : 'bg-white/50 text-gray-700 hover:bg-white hover:shadow-md border border-gray-200'
                       }`}
                       onClick={isWeddingDay ? () => {
-                        const calendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=Ellison%20%26%20Olles%20Bröllop&dates=20260815T150000Z/20260815T230000Z&location=Vaddo&details=Kom%20och%20fira%20oss!`;
-                        window.open(calendarUrl, '_blank');
+                        const link = document.createElement('a');
+                        link.href = '/savethedate.ics';
+                        link.download = 'savethedate.ics';
+                        document.body.appendChild(link);
+                        link.click();
+                        document.body.removeChild(link);
                       } : undefined}
                     >
                       <div className="text-sm font-bold">{day}</div>
