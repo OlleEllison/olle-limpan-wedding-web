@@ -8,47 +8,47 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Wedding Color Scheme - Pink & Navy */
-    --background: 0 0% 98%;
-    --foreground: 215 25% 15%;
+    /* Minimalistic Color Scheme - Toned Down */
+    --background: 0 0% 99%;
+    --foreground: 220 10% 25%;
 
     --card: 0 0% 100%;
-    --card-foreground: 215 25% 15%;
+    --card-foreground: 220 10% 25%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 215 25% 15%;
+    --popover-foreground: 220 10% 25%;
 
-    /* Primary - Wedding Pink */
-    --primary: 340 82% 52%;
+    /* Primary - Soft Blush */
+    --primary: 340 25% 65%;
     --primary-foreground: 0 0% 100%;
-    --primary-light: 340 82% 85%;
+    --primary-light: 340 25% 90%;
 
-    /* Secondary - Wedding Navy */
-    --secondary: 215 84% 25%;
+    /* Secondary - Muted Navy */
+    --secondary: 220 15% 45%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 340 25% 95%;
-    --muted-foreground: 215 15% 55%;
+    --muted: 220 5% 96%;
+    --muted-foreground: 220 8% 50%;
 
-    --accent: 340 25% 95%;
-    --accent-foreground: 215 25% 15%;
+    --accent: 220 5% 96%;
+    --accent-foreground: 220 10% 25%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 60% 55%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 340 20% 90%;
-    --input: 340 20% 95%;
-    --ring: 340 82% 52%;
+    --border: 220 8% 92%;
+    --input: 220 8% 95%;
+    --ring: 340 25% 65%;
 
     --radius: 0.75rem;
     
-    /* Wedding Specific */
-    --wedding-pink: 340 82% 52%;
-    --wedding-navy: 215 84% 25%;
-    --wedding-cream: 45 100% 97%;
-    --wedding-gold: 43 74% 66%;
+    /* Wedding Specific - Toned Down */
+    --wedding-pink: 340 25% 65%;
+    --wedding-navy: 220 15% 45%;
+    --wedding-cream: 45 20% 98%;
+    --wedding-gold: 43 30% 75%;
     
-    /* Gradients */
+    /* Gradients - Subtle */
     --gradient-romantic: linear-gradient(135deg, hsl(var(--wedding-pink)) 0%, hsl(var(--wedding-navy)) 100%);
     --gradient-soft: linear-gradient(180deg, hsl(var(--wedding-cream)) 0%, hsl(var(--background)) 100%);
     
