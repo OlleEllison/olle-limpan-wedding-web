@@ -74,6 +74,12 @@ export const DetailsSection: React.FC = () => {
         'Eller se önskelista',
         'Tack för er generositet!'
       ]
+    },
+    {
+      id: 'calendar',
+      icon: Clock,
+      title: 'Kalender',
+      content: []
     }
   ];
 
@@ -107,16 +113,74 @@ export const DetailsSection: React.FC = () => {
                 <h3 className="font-handwritten text-3xl md:text-4xl text-black">
                   {detail.title}
                 </h3>
-                <div className="space-y-2">
-                  {detail.content.map((item, itemIndex) => (
-                    <p 
-                      key={itemIndex} 
-                      className={`${item === '' ? 'h-2' : 'text-lg text-muted-foreground'}`}
-                    >
-                      {item}
-                    </p>
-                  ))}
-                </div>
+                {detail.id === 'calendar' ? (
+                  // Calendar Section
+                  <div className="flex justify-center mt-6">
+                    <div className="bg-gradient-to-br from-white to-gray-50 border-2 border-primary/20 rounded-3xl p-6 shadow-2xl w-full max-w-4xl mx-auto">
+                      <div className="text-center mb-6">
+                        <h4 className="font-handwritten text-3xl text-primary mb-2">Augusti 2026</h4>
+                        <div className="w-16 h-1 bg-primary mx-auto rounded-full"></div>
+                      </div>
+                      
+                      {/* Calendar Grid */}
+                      <div className="grid grid-cols-7 gap-2">
+                        {/* Day headers */}
+                        {['Sön', 'Mån', 'Tis', 'Ons', 'Tor', 'Fre', 'Lör'].map((day, index) => (
+                          <div key={index} className="p-2 font-bold text-primary text-center border-b-2 border-primary/10">
+                            {day}
+                          </div>
+                        ))}
+                        
+                        {/* Calendar days */}
+                        {/* August 1, 2026 starts on Saturday, so we need 6 empty cells */}
+                        {[...Array(6)].map((_, index) => (
+                          <div key={`empty-${index}`} className="p-2 h-12"></div>
+                        ))}
+                        
+                        {/* Days 1-31 */}
+                        {[...Array(31)].map((_, index) => {
+                          const day = index + 1;
+                          const isWeddingDay = day === 15;
+                          
+                          return (
+                            <div
+                              key={day}
+                              className={`p-2 h-12 flex flex-col items-center justify-center rounded-xl transition-all duration-300 text-base font-semibold ${
+                                isWeddingDay
+                                  ? 'bg-gradient-to-br from-primary to-primary/80 text-white cursor-pointer hover:scale-105 shadow-lg border-2 border-primary-foreground/20'
+                                  : 'bg-white/50 text-gray-700 hover:bg-white hover:shadow-md border border-gray-200'
+                              }`}
+                              onClick={isWeddingDay ? () => {
+                                const link = document.createElement('a');
+                                link.href = '/savethedate.ics';
+                                link.download = 'savethedate.ics';
+                                document.body.appendChild(link);
+                                link.click();
+                                document.body.removeChild(link);
+                              } : undefined}
+                            >
+                              <div className="text-sm font-bold">{day}</div>
+                              {isWeddingDay && (
+                                <div className="text-xs mt-0.5 font-medium">Lägg till</div>
+                              )}
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  </div>
+                ) : (
+                  <div className="space-y-2">
+                    {detail.content.map((item, itemIndex) => (
+                      <p 
+                        key={itemIndex} 
+                        className={`${item === '' ? 'h-2' : 'text-lg text-muted-foreground'}`}
+                      >
+                        {item}
+                      </p>
+                    ))}
+                  </div>
+                )}
               </div>
             ))}
           </div>
