@@ -13,6 +13,21 @@ export default {
       },
     },
     extend: {
+      fontSize: {
+        'xs': '0.625rem',     // 10px (from 12px)
+        'sm': '0.75rem',      // 12px (from 14px)
+        'base': '0.875rem',   // 14px (from 16px)
+        'lg': '1rem',         // 16px (from 18px)
+        'xl': '1.125rem',     // 18px (from 20px)
+        '2xl': '1.375rem',    // 22px (from 24px)
+        '3xl': '1.75rem',     // 28px (from 30px)
+        '4xl': '2rem',        // 32px (from 36px)
+        '5xl': '2.75rem',     // 44px (from 48px)
+        '6xl': '3.5rem',      // 56px (from 60px)
+        '7xl': '4.25rem',     // 68px (from 72px)
+        '8xl': '5.5rem',      // 88px (from 96px)
+        '9xl': '7.5rem',      // 120px (from 128px)
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
