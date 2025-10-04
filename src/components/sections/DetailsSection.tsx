@@ -1,10 +1,10 @@
 import React from 'react';
 import { Clock, MapPin, Shirt, Music, Utensils, AlertTriangle, Gift } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 export const DetailsSection: React.FC = () => {
   const details = [
     {
+      id: 'schedule',
       icon: Clock,
       title: 'Tidschema',
       content: [
@@ -16,6 +16,7 @@ export const DetailsSection: React.FC = () => {
       ]
     },
     {
+      id: 'location',
       icon: MapPin,
       title: 'Plats',
       content: [
@@ -27,6 +28,7 @@ export const DetailsSection: React.FC = () => {
       ]
     },
     {
+      id: 'food',
       icon: Utensils,
       title: 'Mat & Dryck',
       content: [
@@ -38,6 +40,7 @@ export const DetailsSection: React.FC = () => {
       ]
     },
     {
+      id: 'dresscode',
       icon: Shirt,
       title: 'Klädkod',
       content: [
@@ -49,6 +52,7 @@ export const DetailsSection: React.FC = () => {
       ]
     },
     {
+      id: 'important',
       icon: AlertTriangle,
       title: 'Viktigt att komma ihåg',
       content: [
@@ -60,6 +64,7 @@ export const DetailsSection: React.FC = () => {
       ]
     },
     {
+      id: 'gifts',
       icon: Gift,
       title: 'Önskningar',
       content: [
@@ -75,7 +80,7 @@ export const DetailsSection: React.FC = () => {
   return (
     <section id="details" className="py-20 bg-background">
       <div className="container mx-auto px-4">
-        <div className="max-w-6xl mx-auto space-y-12">
+        <div className="max-w-4xl mx-auto space-y-16">
           {/* Section Header */}
           <div className="text-center space-y-4">
             <h2 className="font-handwritten text-5xl md:text-6xl text-black">
@@ -86,34 +91,33 @@ export const DetailsSection: React.FC = () => {
             </p>
           </div>
 
-          {/* Details Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* Details Sections */}
+          <div className="space-y-12">
             {details.map((detail, index) => (
-              <Card 
+              <div 
                 key={index}
-                className="hover:shadow-lg transition-shadow duration-300 border-2 border-primary/10 hover:border-primary/20"
+                id={detail.id}
+                className="text-center space-y-4 py-8 border-b border-border last:border-b-0"
               >
-                <CardHeader className="text-center pb-4">
-                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="flex justify-center mb-4">
+                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center">
                     <detail.icon className="text-primary" size={24} />
                   </div>
-                  <CardTitle className="font-handwritten text-2xl text-black">
-                    {detail.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2 text-center">
-                    {detail.content.map((item, itemIndex) => (
-                      <li 
-                        key={itemIndex} 
-                        className={`${item === '' ? 'h-2' : 'text-muted-foreground'}`}
-                      >
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
+                </div>
+                <h3 className="font-handwritten text-3xl md:text-4xl text-black">
+                  {detail.title}
+                </h3>
+                <div className="space-y-2">
+                  {detail.content.map((item, itemIndex) => (
+                    <p 
+                      key={itemIndex} 
+                      className={`${item === '' ? 'h-2' : 'text-lg text-muted-foreground'}`}
+                    >
+                      {item}
+                    </p>
+                  ))}
+                </div>
+              </div>
             ))}
           </div>
         </div>

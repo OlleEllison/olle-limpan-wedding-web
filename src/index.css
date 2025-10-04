@@ -111,7 +111,7 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Inter', 'Dancing Script', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
   }
   
   /* Floating Hearts Animation */
