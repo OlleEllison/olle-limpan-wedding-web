@@ -9,10 +9,10 @@ export const StorySection: React.FC = () => {
         <div className="max-w-4xl mx-auto text-center space-y-12">
           {/* Section Header */}
           <div className="space-y-4">
-            <h2 className="font-handwritten text-5xl md:text-6xl text-primary">
+            <h2 className="font-handwritten text-xl md:text-2xl text-primary">
               Vår Historia
             </h2>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-base text-muted-foreground">
               Från första intryck till för alltid
             </p>
           </div>
@@ -25,7 +25,7 @@ export const StorySection: React.FC = () => {
                 <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
                   <Heart className="text-primary" size={24} />
                 </div>
-                <h3 className="font-handwritten text-3xl text-secondary">
+                <h3 className="font-handwritten text-lg text-secondary">
                   Första Intrycket
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -45,7 +45,7 @@ export const StorySection: React.FC = () => {
                 <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto">
                   <Star className="text-secondary" size={24} />
                 </div>
-                <h3 className="font-handwritten text-3xl text-secondary">
+                <h3 className="font-handwritten text-lg text-secondary">
                   Frieriet
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">

@@ -10,7 +10,7 @@ export const QuestionsSection: React.FC = () => {
         <div className="max-w-4xl mx-auto space-y-12">
           {/* Questions Header */}
           <div className="text-center space-y-4">
-            <h2 className="font-handwritten text-5xl md:text-6xl text-primary">
+            <h2 className="font-handwritten text-xl md:text-2xl text-primary">
               Frågor
             </h2>
             <div className="flex items-center justify-center gap-3 text-lg text-muted-foreground">

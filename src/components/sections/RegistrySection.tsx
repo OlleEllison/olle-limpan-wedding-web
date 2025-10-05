@@ -34,10 +34,10 @@ export const RegistrySection: React.FC = () => {
         <div className="max-w-4xl mx-auto space-y-12">
           {/* Section Header */}
           <div className="text-center space-y-4">
-            <h2 className="font-handwritten text-5xl md:text-6xl text-primary">
+            <h2 className="font-handwritten text-xl md:text-2xl text-primary">
               Önskelista
             </h2>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-base text-muted-foreground">
               Er närvaro är den bästa presenten, men...
             </p>
           </div>
@@ -48,7 +48,7 @@ export const RegistrySection: React.FC = () => {
               <Heart className="text-primary" size={32} />
             </div>
             <div className="space-y-4">
-              <h3 className="font-handwritten text-3xl text-primary">
+              <h3 className="font-handwritten text-lg text-primary">
                 Kära vänner och familj
               </h3>
               <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
