@@ -89,7 +89,7 @@ export const DetailsSection: React.FC = () => {
         <div className="max-w-4xl mx-auto space-y-16">
           {/* Section Header */}
           <div className="text-center space-y-4">
-            <h2 className="font-handwritten text-4xl md:text-6xl text-primary">
+            <h2 className="font-handwritten text-3xl md:text-4xl text-primary">
               Bröllopsdetaljer
             </h2>
             <p className="text-base text-muted-foreground">
@@ -110,7 +110,7 @@ export const DetailsSection: React.FC = () => {
                     <detail.icon className="text-primary" size={24} />
                   </div>
                 </div>
-                <h3 className="font-handwritten text-3xl md:text-4xl text-black">
+                <h3 className="font-handwritten text-[28px] md:text-[34px] text-black">
                   {detail.title}
                 </h3>
                 {detail.id === 'calendar' ? (
