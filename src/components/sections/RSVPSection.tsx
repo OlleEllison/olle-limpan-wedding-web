@@ -9,7 +9,7 @@ export const RSVPSection: React.FC = () => {
         <div className="max-w-4xl mx-auto space-y-8">
           {/* Section Header */}
           <div className="text-center space-y-4">
-            <h2 className="font-handwritten text-xl md:text-2xl text-primary">
+            <h2 className="font-handwritten text-4xl md:text-6xl text-primary">
               OSA
             </h2>
             <p className="text-base text-muted-foreground">

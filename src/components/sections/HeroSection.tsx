@@ -29,7 +29,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onRSVPClick }) => {
 
           {/* Main Message */}
           <div className="space-y-4">
-            <h1 className="font-handwritten text-6xl md:text-8xl text-primary">
+            <h1 className="font-handwritten text-4xl md:text-6xl text-primary">
               Kom och fira oss!
             </h1>
           </div>
@@ -65,7 +65,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onRSVPClick }) => {
 
           {/* Wedding Date - Handwritten Font */}
           <div className="text-center my-8">
-            <p className="font-handwritten text-4xl md:text-5xl text-black">15 Augusti 2026</p>
+            <p className="font-handwritten text-4xl md:text-6xl text-primary">15 Augusti 2026</p>
             <p className="font-handwritten text-xl md:text-2xl text-muted-foreground mt-2">Vaddo</p>
           </div>
 
