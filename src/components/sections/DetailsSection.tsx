@@ -110,7 +110,7 @@ export const DetailsSection: React.FC = () => {
                     <detail.icon className="text-primary" size={24} />
                   </div>
                 </div>
-                <h3 className="font-handwritten text-[28px] md:text-[34px] text-black">
+                <h3 className="font-handwritten text-xl md:text-2xl text-black">
                   {detail.title}
                 </h3>
                 {detail.id === 'calendar' ? (

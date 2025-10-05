@@ -29,7 +29,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onRSVPClick }) => {
 
           {/* Main Message */}
           <div className="space-y-4">
-            <h1 className="font-handwritten text-3xl md:text-4xl text-primary">
+            <h1 className="font-handwritten text-4xl md:text-6xl text-primary">
               Kom och fira oss!
             </h1>
           </div>
@@ -39,7 +39,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onRSVPClick }) => {
             {/* Left Speech Bubble - moved up */}
             <div className="absolute left-24 top-16 z-10 transform -rotate-12">
               <div className="bg-white border-2 border-black rounded-lg px-6 py-3 relative shadow-lg scale-150">
-                <p className="font-handwritten text-base md:text-lg text-black whitespace-nowrap">Mer info kommer!</p>
+                <p className="font-serif text-base md:text-lg text-black whitespace-nowrap">Mer info kommer!</p>
                 <div className="absolute bottom-[-8px] right-6 w-0 h-0 border-l-[8px] border-l-transparent border-r-[8px] border-r-transparent border-t-[8px] border-t-white"></div>
                 <div className="absolute bottom-[-10px] right-6 w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-t-[10px] border-t-black"></div>
               </div>
@@ -56,7 +56,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onRSVPClick }) => {
             {/* Right Speech Bubble - moved up */}
             <div className="absolute right-24 top-16 z-10 transform rotate-12">
               <div className="bg-white border-2 border-black rounded-lg px-6 py-3 relative shadow-lg scale-150">
-                <p className="font-handwritten text-base md:text-lg text-black whitespace-nowrap">Kom igen det blir kul!</p>
+                <p className="font-serif text-base md:text-lg text-black whitespace-nowrap">Kom igen det blir kul!</p>
                 <div className="absolute bottom-[-8px] left-6 w-0 h-0 border-l-[8px] border-l-transparent border-r-[8px] border-r-transparent border-t-[8px] border-t-white"></div>
                 <div className="absolute bottom-[-10px] left-6 w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-t-[10px] border-t-black"></div>
               </div>
