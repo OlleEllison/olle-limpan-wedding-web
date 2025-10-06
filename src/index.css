@@ -114,7 +114,7 @@ All colors MUST be HSL.
     font-family: 'Times New Roman', Times, serif;
     font-size: 12px;
     line-height: 1;
-    background-image: url('@/assets/map-background.png');
+    background-image: url('/src/assets/map-background.png');
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
