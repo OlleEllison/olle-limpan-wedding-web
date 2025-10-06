@@ -70,8 +70,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onRSVPClick }) => {
           </div>
 
           {/* Countdown with Calendar Button */}
-          <div className="bg-gradient-romantic text-white rounded-2xl p-6 shadow-xl flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-3xl md:text-4xl font-bold font-handwritten text-center flex-1">{daysLeft} dagar kvar</p>
+          <div className="bg-gradient-romantic text-white rounded-2xl p-6 shadow-xl relative">
+            <div className="flex items-center justify-center">
+              <p className="text-3xl md:text-4xl font-bold font-handwritten text-center">{daysLeft} dagar kvar</p>
+            </div>
             <Button
               variant="ghost"
               size="lg"
@@ -83,7 +85,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onRSVPClick }) => {
                 link.click();
                 document.body.removeChild(link);
               }}
-              className="bg-transparent border border-white text-white hover:bg-white/10 flex flex-col items-center gap-1 h-auto py-3"
+              className="absolute right-6 top-1/2 -translate-y-1/2 bg-transparent border border-white text-white hover:bg-white/10 flex flex-col items-center gap-1 h-auto py-3"
             >
               <Calendar className="w-6 h-6" />
               <span className="text-sm">Lägg till i kalender</span>
