@@ -5,9 +5,9 @@ import { AspectRatio } from '@/components/ui/aspect-ratio';
 
 export const QuestionsSection: React.FC = () => {
   return (
-    <section className="py-20 bg-background">
+    <section className="py-10 bg-background">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto space-y-12">
+        <div className="max-w-4xl mx-auto space-y-6">
           {/* Questions Header */}
           <div className="text-center space-y-4">
             <h2 className="font-handwritten text-3xl md:text-4xl text-primary">

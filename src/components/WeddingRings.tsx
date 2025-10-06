@@ -35,11 +35,6 @@ export const WeddingRings: React.FC<WeddingRingsProps> = ({ className = "", size
         strokeWidth="3"
         className="drop-shadow-sm"
       />
-      
-      {/* Small sparkles */}
-      <circle cx="15" cy="25" r="1" fill="hsl(var(--wedding-pink))" className="animate-pulse" />
-      <circle cx="49" cy="25" r="1" fill="hsl(var(--wedding-navy))" className="animate-pulse" style={{ animationDelay: '0.5s' }} />
-      <circle cx="32" cy="20" r="1" fill="hsl(var(--wedding-gold))" className="animate-pulse" style={{ animationDelay: '1s' }} />
     </svg>
   );
 };

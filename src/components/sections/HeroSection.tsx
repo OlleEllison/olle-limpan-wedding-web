@@ -39,7 +39,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onRSVPClick }) => {
             {/* Left Speech Bubble - moved up */}
             <div className="absolute left-24 top-16 z-10 transform -rotate-12">
               <div className="bg-white border-2 border-black rounded-lg px-6 py-3 relative shadow-lg scale-150">
-                <p className="font-serif text-base md:text-lg text-black whitespace-nowrap">Mer info kommer!</p>
+                <p className="font-serif text-[14px] md:text-[16px] text-black whitespace-nowrap">Mer info kommer!</p>
                 <div className="absolute bottom-[-8px] right-6 w-0 h-0 border-l-[8px] border-l-transparent border-r-[8px] border-r-transparent border-t-[8px] border-t-white"></div>
                 <div className="absolute bottom-[-10px] right-6 w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-t-[10px] border-t-black"></div>
               </div>
@@ -56,7 +56,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onRSVPClick }) => {
             {/* Right Speech Bubble - moved up */}
             <div className="absolute right-24 top-16 z-10 transform rotate-12">
               <div className="bg-white border-2 border-black rounded-lg px-6 py-3 relative shadow-lg scale-150">
-                <p className="font-serif text-base md:text-lg text-black whitespace-nowrap">Kom igen det blir kul!</p>
+                <p className="font-serif text-[14px] md:text-[16px] text-black whitespace-nowrap">Kom igen det blir kul!</p>
                 <div className="absolute bottom-[-8px] left-6 w-0 h-0 border-l-[8px] border-l-transparent border-r-[8px] border-r-transparent border-t-[8px] border-t-white"></div>
                 <div className="absolute bottom-[-10px] left-6 w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-t-[10px] border-t-black"></div>
               </div>
@@ -69,9 +69,24 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onRSVPClick }) => {
             <p className="font-handwritten text-xl md:text-2xl text-muted-foreground mt-2">Vaddo</p>
           </div>
 
-          {/* Countdown */}
-          <div className="bg-gradient-romantic text-white rounded-2xl p-6 shadow-xl">
+          {/* Countdown with Calendar Button */}
+          <div className="bg-gradient-romantic text-white rounded-2xl p-6 shadow-xl flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-3xl md:text-4xl font-bold font-handwritten">{daysLeft} dagar kvar</p>
+            <Button
+              variant="secondary"
+              size="lg"
+              onClick={() => {
+                const link = document.createElement('a');
+                link.href = '/savethedate.ics';
+                link.download = 'savethedate.ics';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+              }}
+              className="bg-white text-primary hover:bg-white/90"
+            >
+              Lägg till i kalender
+            </Button>
           </div>
 
         </div>

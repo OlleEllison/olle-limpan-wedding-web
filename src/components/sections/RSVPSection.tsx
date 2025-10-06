@@ -4,9 +4,9 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 export const RSVPSection: React.FC = () => {
   return (
-    <section id="rsvp" className="py-20 bg-gradient-soft">
+    <section id="rsvp" className="py-10 bg-gradient-soft">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto space-y-8">
+        <div className="max-w-4xl mx-auto space-y-6">
           {/* Section Header */}
           <div className="text-center space-y-4">
             <h2 className="font-handwritten text-3xl md:text-4xl text-primary">

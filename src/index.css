@@ -18,13 +18,13 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 220 10% 25%;
 
-    /* Primary - Soft Blush */
-    --primary: 340 25% 65%;
+    /* Primary - Bright Pink */
+    --primary: 340 82% 52%;
     --primary-foreground: 0 0% 100%;
-    --primary-light: 340 25% 90%;
+    --primary-light: 340 82% 70%;
 
-    /* Secondary - Muted Navy */
-    --secondary: 220 15% 45%;
+    /* Secondary - Navy */
+    --secondary: 220 84% 15%;
     --secondary-foreground: 0 0% 100%;
 
     --muted: 220 5% 96%;
@@ -38,13 +38,13 @@ All colors MUST be HSL.
 
     --border: 220 8% 92%;
     --input: 220 8% 95%;
-    --ring: 340 25% 65%;
+    --ring: 340 82% 52%;
 
     --radius: 0.75rem;
     
-    /* Wedding Specific - Toned Down */
-    --wedding-pink: 340 25% 65%;
-    --wedding-navy: 220 15% 45%;
+    /* Wedding Specific - Bright */
+    --wedding-pink: 340 82% 52%;
+    --wedding-navy: 220 84% 15%;
     --wedding-cream: 45 20% 98%;
     --wedding-gold: 43 30% 75%;
     
@@ -114,6 +114,11 @@ All colors MUST be HSL.
     font-family: 'Times New Roman', Times, serif;
     font-size: 12px;
     line-height: 1;
+    background-image: url('@/assets/map-background.png');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
   
   /* Floating Hearts Animation */

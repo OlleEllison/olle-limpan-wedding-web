@@ -20,7 +20,6 @@ export const Navigation: React.FC<NavigationProps> = ({ activeSection, onSection
     { id: 'dresscode', label: 'Klädkod', icon: Heart },
     { id: 'important', label: 'Viktigt', icon: Heart },
     { id: 'gifts', label: 'Önskningar', icon: Heart },
-    { id: 'calendar', label: 'Kalender', icon: Heart },
     { id: 'rsvp', label: 'OSA', icon: Heart },
   ];
 
@@ -45,26 +44,10 @@ export const Navigation: React.FC<NavigationProps> = ({ activeSection, onSection
             <WeddingRings size={32} />
           </div>
 
-          {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-6">
-            {menuItems.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => handleMenuClick(item.id)}
-                className={`text-sm font-medium transition-colors hover:text-primary ${
-                  activeSection === item.id ? 'text-primary' : 'text-muted-foreground'
-                }`}
-              >
-                {item.label}
-              </button>
-            ))}
-          </div>
-
-          {/* Mobile Menu Button */}
+          {/* Menu Button - Always visible */}
           <Button
             variant="ghost"
             size="sm"
-            className="md:hidden"
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <X size={20} /> : <Menu size={20} />}
@@ -72,9 +55,9 @@ export const Navigation: React.FC<NavigationProps> = ({ activeSection, onSection
         </div>
       </nav>
 
-      {/* Mobile Menu Overlay */}
+      {/* Menu Overlay - All screen sizes */}
       {isOpen && (
-        <div className="fixed inset-0 z-40 md:hidden">
+        <div className="fixed inset-0 z-40">
           <div className="fixed inset-0 bg-background/80 backdrop-blur-sm" onClick={() => setIsOpen(false)} />
           <div className="fixed top-16 left-0 right-0 bg-card border-b border-border">
             <div className="p-4 space-y-2">
