@@ -3,6 +3,7 @@ import { Calendar } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { WeddingRings } from '../WeddingRings';
 import { BlurredCoupleImage } from '../BlurredCoupleImage';
+import { useIsMobile } from '@/hooks/use-mobile';
 import coupleImage from '@/assets/couple-image.png';
 import newCoupleImage from '@/assets/couple-new.png';
 
@@ -11,6 +12,7 @@ interface HeroSectionProps {
 }
 
 export const HeroSection: React.FC<HeroSectionProps> = ({ onRSVPClick }) => {
+  const isMobile = useIsMobile();
   const weddingDate = new Date('2026-08-15');
   const now = new Date();
   const daysLeft = Math.ceil((weddingDate.getTime() - now.getTime()) / (1000 * 60 * 60 * 24));
@@ -36,14 +38,16 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onRSVPClick }) => {
 
           {/* Couple Image with Speech Bubbles */}
           <div className="relative flex justify-center items-center my-12">
-            {/* Left Speech Bubble - moved up */}
-            <div className="absolute left-24 top-16 z-10 transform -rotate-12">
-              <div className="bg-white border-2 border-black rounded-lg px-6 py-3 relative shadow-lg scale-150">
-                <p className="font-serif text-[12px] md:text-[14px] text-black whitespace-nowrap">Mer info kommer!</p>
-                <div className="absolute bottom-[-8px] right-6 w-0 h-0 border-l-[8px] border-l-transparent border-r-[8px] border-r-transparent border-t-[8px] border-t-white"></div>
-                <div className="absolute bottom-[-10px] right-6 w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-t-[10px] border-t-black"></div>
+            {/* Left Speech Bubble - hidden on mobile */}
+            {!isMobile && (
+              <div className="absolute left-24 top-16 z-10 transform -rotate-12">
+                <div className="bg-white border-2 border-black rounded-lg px-6 py-3 relative shadow-lg scale-150">
+                  <p className="font-serif text-[12px] text-black whitespace-nowrap">Mer info kommer!</p>
+                  <div className="absolute bottom-[-8px] right-6 w-0 h-0 border-l-[8px] border-l-transparent border-r-[8px] border-r-transparent border-t-[8px] border-t-white"></div>
+                  <div className="absolute bottom-[-10px] right-6 w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-t-[10px] border-t-black"></div>
+                </div>
               </div>
-            </div>
+            )}
 
             {/* Couple Image with Blurred Background */}
             <div className="relative">
@@ -53,14 +57,16 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onRSVPClick }) => {
               />
             </div>
 
-            {/* Right Speech Bubble - moved up */}
-            <div className="absolute right-24 top-16 z-10 transform rotate-12">
-              <div className="bg-white border-2 border-black rounded-lg px-6 py-3 relative shadow-lg scale-150">
-                <p className="font-serif text-[12px] md:text-[14px] text-black whitespace-nowrap">Kom igen det blir kul!</p>
-                <div className="absolute bottom-[-8px] left-6 w-0 h-0 border-l-[8px] border-l-transparent border-r-[8px] border-r-transparent border-t-[8px] border-t-white"></div>
-                <div className="absolute bottom-[-10px] left-6 w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-t-[10px] border-t-black"></div>
+            {/* Right Speech Bubble - hidden on mobile */}
+            {!isMobile && (
+              <div className="absolute right-24 top-16 z-10 transform rotate-12">
+                <div className="bg-white border-2 border-black rounded-lg px-6 py-3 relative shadow-lg scale-150">
+                  <p className="font-serif text-[12px] text-black whitespace-nowrap">Kom igen det blir kul!</p>
+                  <div className="absolute bottom-[-8px] left-6 w-0 h-0 border-l-[8px] border-l-transparent border-r-[8px] border-r-transparent border-t-[8px] border-t-white"></div>
+                  <div className="absolute bottom-[-10px] left-6 w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-t-[10px] border-t-black"></div>
+                </div>
               </div>
-            </div>
+            )}
           </div>
 
           {/* Wedding Date - Handwritten Font */}
@@ -70,26 +76,26 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onRSVPClick }) => {
           </div>
 
           {/* Countdown with Calendar Button */}
-          <div className="bg-gradient-romantic text-white rounded-2xl p-6 shadow-xl relative">
-            <div className="flex items-center justify-center">
-              <p className="text-3xl md:text-4xl font-bold font-handwritten text-center">{daysLeft} dagar kvar</p>
+          <div className="bg-gradient-romantic text-white rounded-2xl p-6 shadow-xl">
+            <div className="flex flex-col md:flex-row items-center justify-center gap-4">
+              <p className="text-3xl md:text-4xl font-bold font-handwritten text-center flex-1">{daysLeft} dagar kvar</p>
+              <Button
+                variant="ghost"
+                size="lg"
+                onClick={() => {
+                  const link = document.createElement('a');
+                  link.href = '/savethedate.ics';
+                  link.download = 'savethedate.ics';
+                  document.body.appendChild(link);
+                  link.click();
+                  document.body.removeChild(link);
+                }}
+                className="bg-transparent border border-white text-white hover:bg-white/10 flex flex-col items-center gap-1 h-auto py-3 px-4"
+              >
+                <Calendar className="w-6 h-6" />
+                <span className="text-sm">Lägg till i kalender</span>
+              </Button>
             </div>
-            <Button
-              variant="ghost"
-              size="lg"
-              onClick={() => {
-                const link = document.createElement('a');
-                link.href = '/savethedate.ics';
-                link.download = 'savethedate.ics';
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-              }}
-              className="absolute right-6 top-1/2 -translate-y-1/2 bg-transparent border border-white text-white hover:bg-white/10 flex flex-col items-center gap-1 h-auto py-3"
-            >
-              <Calendar className="w-6 h-6" />
-              <span className="text-sm">Lägg till i kalender</span>
-            </Button>
           </div>
 
         </div>
