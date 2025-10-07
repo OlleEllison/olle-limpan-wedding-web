@@ -73,25 +73,25 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onRSVPClick }) => {
 
           {/* Countdown with Calendar Button */}
           <div className="bg-gradient-romantic text-white rounded-2xl p-6 shadow-xl relative">
-            <div className="flex items-center justify-center">
-              <p className="text-3xl md:text-4xl font-bold font-handwritten text-center">{daysLeft} dagar kvar</p>
+            <div className={`flex ${isMobile ? 'flex-col' : 'items-center justify-center'} gap-4`}>
+              <p className="text-3xl md:text-4xl font-bold font-handwritten text-center flex-1">{daysLeft} dagar kvar</p>
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => {
+                  const link = document.createElement('a');
+                  link.href = '/savethedate.ics';
+                  link.download = 'savethedate.ics';
+                  document.body.appendChild(link);
+                  link.click();
+                  document.body.removeChild(link);
+                }}
+                className={`bg-transparent border border-white text-white hover:bg-white/10 flex flex-col items-center gap-0.5 h-auto py-2 px-3 ${!isMobile ? 'absolute right-4 top-1/2 -translate-y-1/2' : ''}`}
+              >
+                <Calendar className="w-4 h-4" />
+                <span className="text-xs">Lägg till i kalender</span>
+              </Button>
             </div>
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={() => {
-                const link = document.createElement('a');
-                link.href = '/savethedate.ics';
-                link.download = 'savethedate.ics';
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-              }}
-              className="absolute right-4 top-1/2 -translate-y-1/2 bg-transparent border border-white text-white hover:bg-white/10 flex flex-col items-center gap-0.5 h-auto py-2 px-3"
-            >
-              <Calendar className="w-4 h-4" />
-              <span className="text-xs">Lägg till i kalender</span>
-            </Button>
           </div>
 
         </div>
