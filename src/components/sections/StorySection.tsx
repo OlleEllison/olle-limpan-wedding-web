@@ -4,7 +4,7 @@ import { Card, CardContent } from '@/components/ui/card';
 
 export const StorySection: React.FC = () => {
   return (
-    <section id="story" className="py-20 bg-gradient-soft">
+    <section id="story" className="py-20 bg-transparent">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center space-y-12">
           {/* Section Header */}
@@ -61,7 +61,7 @@ export const StorySection: React.FC = () => {
           </div>
 
           {/* Quote */}
-          <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-primary/20">
+          <div className="bg-transparent backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-primary/20">
             <blockquote className="font-handwritten text-3xl md:text-4xl text-primary text-center leading-relaxed">
               "Tillsammans är vi perfekta"
             </blockquote>

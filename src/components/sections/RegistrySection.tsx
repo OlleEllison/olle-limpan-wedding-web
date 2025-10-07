@@ -29,7 +29,7 @@ export const RegistrySection: React.FC = () => {
   ];
 
   return (
-    <section id="registry" className="py-20 bg-background">
+    <section id="registry" className="py-20 bg-transparent">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto space-y-12">
           {/* Section Header */}
@@ -43,7 +43,7 @@ export const RegistrySection: React.FC = () => {
           </div>
 
           {/* Main Message */}
-          <div className="bg-gradient-soft rounded-2xl p-8 text-center space-y-6 border-2 border-primary/20">
+          <div className="bg-transparent rounded-2xl p-8 text-center space-y-6 border-2 border-primary/20">
             <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
               <Heart className="text-primary" size={32} />
             </div>

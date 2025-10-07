@@ -78,7 +78,7 @@ export const DetailsSection: React.FC = () => {
   ];
 
   return (
-    <section id="details" className="py-10 bg-background">
+    <section id="details" className="py-10 bg-transparent">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto space-y-8">
           {/* Section Header */}
