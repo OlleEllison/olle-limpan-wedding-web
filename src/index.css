@@ -114,36 +114,30 @@ All colors MUST be HSL.
     font-family: 'Times New Roman', Times, serif;
     font-size: 12px;
     line-height: 1;
-    background-image: url('/src/assets/map-background.png');
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
   }
   
-  /* Floating Hearts Animation */
-  .floating-hearts::before {
+  /* Parallax Background */
+  body::before {
     content: '';
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: 
-      radial-gradient(2px 2px at 20% 30%, hsl(var(--wedding-pink)), transparent),
-      radial-gradient(2px 2px at 40% 70%, hsl(var(--wedding-pink)), transparent),
-      radial-gradient(1px 1px at 90% 40%, hsl(var(--wedding-pink)), transparent),
-      radial-gradient(1px 1px at 60% 10%, hsl(var(--wedding-pink)), transparent);
-    background-repeat: repeat;
-    background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
-    animation: floating-hearts 20s linear infinite;
-    pointer-events: none;
-    z-index: 1;
+    background-image: url('/src/assets/map-background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: translateZ(-1px) scale(1.5);
+    transform-style: preserve-3d;
+    z-index: -1;
+    will-change: transform;
   }
   
-  @keyframes floating-hearts {
-    0% { transform: translateY(100vh) rotate(0deg); }
-    100% { transform: translateY(-100vh) rotate(360deg); }
+  /* Enable perspective for parallax */
+  html {
+    perspective: 1px;
+    overflow-x: hidden;
   }
   
   /* Handwritten Font */

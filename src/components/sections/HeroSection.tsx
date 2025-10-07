@@ -19,8 +19,6 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onRSVPClick }) => {
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Floating Hearts Background */}
-      <div className="floating-hearts" />
       
       <div className="container mx-auto px-4 text-center relative z-10">
         <div className="max-w-4xl mx-auto space-y-8">
