@@ -18,7 +18,7 @@ export const RSVPSection: React.FC = () => {
           </div>
 
           {/* Google Form */}
-          <Card className="shadow-xl border-2 border-primary/20">
+          <Card className="shadow-xl border-2 border-primary/20 bg-transparent backdrop-blur-sm">
             <CardHeader className="text-center">
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Heart className="text-primary" size={24} />

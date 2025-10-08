@@ -10,7 +10,7 @@ All colors MUST be HSL.
   :root {
     /* Minimalistic Color Scheme - Toned Down */
     --background: 0 0% 99%;
-    --foreground: 220 10% 25%;
+    --foreground: 0 0% 0%;
 
     --card: 0 0% 100%;
     --card-foreground: 220 10% 25%;
@@ -133,7 +133,7 @@ All colors MUST be HSL.
     background-repeat: no-repeat;
     z-index: -1;
     opacity: 0.95;
-    filter: brightness(1.3) contrast(0.9);
+    filter: brightness(1.6) contrast(0.85);
   }
   
   /* Parallax wrapper */
