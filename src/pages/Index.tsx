@@ -38,10 +38,10 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-transparent relative">
       <Navigation activeSection={activeSection} onSectionChange={setActiveSection} />
       
-      <main className="pt-16">
+      <main className="pt-16 relative z-10" style={{ transform: 'translateZ(0)' }}>
         <HeroSection onRSVPClick={handleRSVPClick} />
         <DetailsSection />
         <RSVPSection />
