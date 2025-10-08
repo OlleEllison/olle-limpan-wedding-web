@@ -122,14 +122,14 @@ All colors MUST be HSL.
   body::before {
     content: '';
     position: fixed;
-    top: 20%;
+    top: 0;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
     width: 100vw;
-    height: 100vh;
+    height: 130vh;
     background-image: url('/src/assets/background-pattern.png');
     background-size: cover;
-    background-position: center center;
+    background-position: center 30%;
     background-repeat: no-repeat;
     z-index: -1;
     opacity: 0.95;
