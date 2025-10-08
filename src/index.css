@@ -133,7 +133,6 @@ All colors MUST be HSL.
     background-repeat: no-repeat;
     z-index: -1;
     opacity: 0.95;
-    filter: brightness(1.6) contrast(0.85);
   }
   
   /* Parallax wrapper */
