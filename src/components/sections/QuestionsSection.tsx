@@ -49,7 +49,7 @@ export const QuestionsSection: React.FC = () => {
             {/* "Vi ses snart" text */}
             <div className="text-center">
               <p className="font-handwritten text-3xl md:text-4xl text-primary">
-                Vi ses snart
+                Vi ses snart!
               </p>
             </div>
           </div>

@@ -37,14 +37,6 @@ export const RSVPSection: React.FC = () => {
             </CardContent>
           </Card>
 
-          {/* Contact Info */}
-          <div className="text-center text-sm text-muted-foreground">
-            <p>
-              Har du problem med formuläret? 
-              <br />
-              Kontakta oss på [e-post] eller [telefon]
-            </p>
-          </div>
         </div>
       </div>
     </section>

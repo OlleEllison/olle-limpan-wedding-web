@@ -8,11 +8,16 @@ export const DetailsSection: React.FC = () => {
       icon: Clock,
       title: 'Tidschema',
       content: [
+        'Lördag:',
+        '14:30 - Buss från Grisslehamn Havsbad',
         '15:00 - Vigsel',
-        '16:00 - Mingel & fotografering',
+        '16:00 - Mingel',
         '18:00 - Middag',
-        '20:00 - Tal & skålar',
-        '21:00 - Dans till sent'
+        '22:00 - Första buss till Grisslehamn',
+        '02:00 - Sista buss till Grisslehamn',
+        '',
+        'Söndag:',
+        'Frivillig gemensam brunch på XXX'
       ]
     },
     {
@@ -20,23 +25,22 @@ export const DetailsSection: React.FC = () => {
       icon: MapPin,
       title: 'Plats',
       content: [
-        'Vaddo Kyrka',
-        'Vigsel kl 15:00',
-        '',
-        'Fest på [Plats]',
-        'Adress kommer senare'
+        'Folk & Fä',
+        'Gamla Landsvägen 57',
+        '764 56 Grisslehamn'
       ]
     },
     {
-      id: 'food',
+      id: 'accommodation',
       icon: Utensils,
-      title: 'Mat & Dryck',
+      title: 'Boende',
       content: [
-        'Trerätters middag',
-        'Vegetariska alternativ',
-        'Barbar tillgänglig',
-        'Meddela allergier vid OSA',
-        'Midnattsmacka serveras'
+        'Vi rekommenderar övernattning i Grisslehamn och bussar kommer att finnas tillgängligt för att ta er till Folk & Fä och tillbaka så ni slipper ta egen bil.',
+        '',
+        'Rekommenderade boenden i Grisslehamn:',
+        'Grisslehamns Havsbad (https://www.hotellhavsbaden.se/)',
+        'Grisslehamns Gård (https://www.pensionatgrisslehamn.se/)',
+        'Pensionat Solgården (https://www.pensionat-solgarden.se/)'
       ]
     },
     {
@@ -44,11 +48,7 @@ export const DetailsSection: React.FC = () => {
       icon: Shirt,
       title: 'Klädkod',
       content: [
-        'Kavaj för herrar',
-        'Klänning för damer',
-        'Bekväma skor för dans',
-        'Färgtema: Rosa & Marinblå',
-        'Kom som ni känner er bäst!'
+        'Mörk kostym'
       ]
     },
     {
@@ -56,23 +56,18 @@ export const DetailsSection: React.FC = () => {
       icon: AlertTriangle,
       title: 'Viktigt att komma ihåg',
       content: [
-        'Buss från Stockholm arrangeras',
-        'Hotell & B&B rekommendationer',
-        'Ta med kofta för kvällen',
-        'Bekväma skor rekommenderas',
-        'Frågor? Kontakta oss!'
+        'Buss till och från Grisslehamn kommer att finnas',
+        'Parkering finns på plats',
+        'Möjlighet för kvällsbad kommer att finnas',
+        'Frågor, hör av dig!'
       ]
     },
     {
       id: 'gifts',
       icon: Gift,
-      title: 'Önskningar',
+      title: 'Bröllopsgåva',
       content: [
-        'Er närvaro är det bästa',
-        'Bidrag till smekmånad',
-        'Swish: [nummer]',
-        'Eller se önskelista',
-        'Tack för er generositet!'
+        'Er närvaro är det enda vi önskar! Om ni ändå vill bidra med något kan ni swisha vår Best Person XXX på XXX för bidrag till vår smekmånad.'
       ]
     }
   ];
@@ -86,9 +81,6 @@ export const DetailsSection: React.FC = () => {
             <h2 className="font-handwritten text-3xl md:text-4xl text-primary">
               Bröllopsdetaljer
             </h2>
-            <p className="text-base text-muted-foreground">
-              Allt ni behöver veta om vår stora dag
-            </p>
           </div>
 
           {/* Details Sections */}
