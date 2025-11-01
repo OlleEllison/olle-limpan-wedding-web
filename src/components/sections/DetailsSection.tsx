@@ -1,8 +1,21 @@
 import React from 'react';
 import { Clock, MapPin, Shirt, Music, Utensils, AlertTriangle, Gift } from 'lucide-react';
 
+interface DetailLink {
+  name: string;
+  url: string;
+}
+
+interface Detail {
+  id: string;
+  icon: any;
+  title: string;
+  content: string[];
+  links?: DetailLink[];
+}
+
 export const DetailsSection: React.FC = () => {
-  const details = [
+  const details: Detail[] = [
     {
       id: 'schedule',
       icon: Clock,
@@ -37,10 +50,12 @@ export const DetailsSection: React.FC = () => {
       content: [
         'Vi rekommenderar övernattning i Grisslehamn och bussar kommer att finnas tillgängligt för att ta er till Folk & Fä och tillbaka så ni slipper ta egen bil.',
         '',
-        'Rekommenderade boenden i Grisslehamn:',
-        'Grisslehamns Havsbad (https://www.hotellhavsbaden.se/)',
-        'Grisslehamns Gård (https://www.pensionatgrisslehamn.se/)',
-        'Pensionat Solgården (https://www.pensionat-solgarden.se/)'
+        'Rekommenderade boenden i Grisslehamn:'
+      ],
+      links: [
+        { name: 'Grisslehamns Havsbad', url: 'https://www.hotellhavsbaden.se/' },
+        { name: 'Grisslehamns Gård', url: 'https://www.pensionatgrisslehamn.se/' },
+        { name: 'Pensionat Solgården', url: 'https://www.pensionat-solgarden.se/' }
       ]
     },
     {
@@ -108,6 +123,22 @@ export const DetailsSection: React.FC = () => {
                       {item}
                     </p>
                   ))}
+                  {detail.links && detail.links.length > 0 && (
+                    <div className="space-y-1">
+                      {detail.links.map((link, linkIndex) => (
+                        <p key={linkIndex} className="text-lg text-muted-foreground">
+                          <a 
+                            href={link.url} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="text-primary hover:underline"
+                          >
+                            {link.name}
+                          </a>
+                        </p>
+                      ))}
+                    </div>
+                  )}
                 </div>
               </div>
             ))}
