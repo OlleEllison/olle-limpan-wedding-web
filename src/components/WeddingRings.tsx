@@ -1,5 +1,5 @@
 import React from 'react';
-import ringsImage from '@/assets/rings-new.png';
+import ringsImage from '@/assets/rings.svg';
 
 interface WeddingRingsProps {
   className?: string;
