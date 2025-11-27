@@ -28,7 +28,14 @@ export const QuestionsSection: React.FC = () => {
             </div>
           </div>
 
-          {/* Image Placeholder */}
+          {/* Vi ses snart text */}
+          <div className="text-center">
+            <p className="font-handwritten text-3xl md:text-4xl text-primary">
+              Vi ses snart!
+            </p>
+          </div>
+
+          {/* Image Collage */}
           <div className="space-y-6">
             <Card className="shadow-lg border border-border/50">
               <CardContent className="p-8">
@@ -39,13 +46,6 @@ export const QuestionsSection: React.FC = () => {
                 />
               </CardContent>
             </Card>
-            
-            {/* "Vi ses snart" text */}
-            <div className="text-center">
-              <p className="font-handwritten text-3xl md:text-4xl text-primary">
-                Vi ses snart!
-              </p>
-            </div>
           </div>
         </div>
       </div>
