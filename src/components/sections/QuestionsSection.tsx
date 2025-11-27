@@ -2,6 +2,7 @@ import React from 'react';
 import { Mail } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
+import coupleCollage from '@/assets/couple-collage.png';
 
 export const QuestionsSection: React.FC = () => {
   return (
@@ -32,16 +33,11 @@ export const QuestionsSection: React.FC = () => {
             <Card className="shadow-lg border border-border/50">
               <CardContent className="p-8">
                 <AspectRatio ratio={16 / 9}>
-                  <div className="w-full h-full bg-muted rounded-lg flex items-center justify-center border-2 border-dashed border-border">
-                    <div className="text-center space-y-2">
-                      <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
-                        <span className="text-primary text-2xl">📷</span>
-                      </div>
-                      <p className="text-muted-foreground text-sm">
-                        Bildplatshållare
-                      </p>
-                    </div>
-                  </div>
+                  <img 
+                    src={coupleCollage} 
+                    alt="Foto collage av brudparet" 
+                    className="w-full h-full object-cover rounded-lg"
+                  />
                 </AspectRatio>
               </CardContent>
             </Card>
