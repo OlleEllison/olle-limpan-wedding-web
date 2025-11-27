@@ -32,13 +32,11 @@ export const QuestionsSection: React.FC = () => {
           <div className="space-y-6">
             <Card className="shadow-lg border border-border/50">
               <CardContent className="p-8">
-                <AspectRatio ratio={16 / 9}>
-                  <img 
-                    src={coupleCollage} 
-                    alt="Foto collage av brudparet" 
-                    className="w-full h-full object-contain rounded-lg"
-                  />
-                </AspectRatio>
+                <img 
+                  src={coupleCollage} 
+                  alt="Foto collage av brudparet" 
+                  className="w-full h-auto rounded-lg"
+                />
               </CardContent>
             </Card>
             
