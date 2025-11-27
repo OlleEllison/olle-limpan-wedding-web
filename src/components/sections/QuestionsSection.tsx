@@ -36,7 +36,7 @@ export const QuestionsSection: React.FC = () => {
                   <img 
                     src={coupleCollage} 
                     alt="Foto collage av brudparet" 
-                    className="w-full h-full object-cover rounded-lg"
+                    className="w-full h-full object-contain rounded-lg"
                   />
                 </AspectRatio>
               </CardContent>
