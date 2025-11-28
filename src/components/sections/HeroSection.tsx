@@ -35,7 +35,11 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onRSVPClick }) => {
               alt="Kom och fira oss!" 
               className="h-16 md:h-24 w-auto"
               style={{
-                filter: 'brightness(0) saturate(100%) invert(28%) sepia(93%) saturate(1045%) hue-rotate(314deg) brightness(91%) contrast(96%)'
+                filter: 'brightness(0) saturate(100%) invert(28%) sepia(93%) saturate(1045%) hue-rotate(314deg) brightness(91%) contrast(96%)',
+                imageRendering: 'auto',
+                WebkitFontSmoothing: 'antialiased',
+                backfaceVisibility: 'hidden',
+                transform: 'translateZ(0)'
               }}
             />
           </div>
