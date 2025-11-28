@@ -36,11 +36,12 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onRSVPClick }) => {
               className="h-24 md:h-36 w-auto"
               style={{
                 filter: 'brightness(0) saturate(100%) invert(27%) sepia(98%) saturate(5474%) hue-rotate(329deg) brightness(95%) contrast(93%)',
-                imageRendering: 'auto',
                 WebkitFontSmoothing: 'antialiased',
+                MozOsxFontSmoothing: 'grayscale',
                 backfaceVisibility: 'hidden',
-                transform: 'translateZ(0)'
-              }}
+                transform: 'translateZ(0) scale(1.001)',
+                willChange: 'transform'
+              } as React.CSSProperties}
             />
           </div>
 
