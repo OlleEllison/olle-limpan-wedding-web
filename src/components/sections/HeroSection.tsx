@@ -6,6 +6,7 @@ import { BlurredCoupleImage } from '../BlurredCoupleImage';
 import { useIsMobile } from '@/hooks/use-mobile';
 import coupleImage from '@/assets/couple-image.png';
 import newCoupleImage from '@/assets/couple-new.png';
+import komOchFiraText from '@/assets/kom-och-fira-text.png';
 
 interface HeroSectionProps {
   onRSVPClick: () => void;
@@ -28,10 +29,15 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onRSVPClick }) => {
           </div>
 
           {/* Main Message */}
-          <div className="space-y-4">
-            <h1 className="font-handwritten text-4xl md:text-6xl text-primary">
-              Kom och fira oss!
-            </h1>
+          <div className="space-y-4 flex justify-center">
+            <img 
+              src={komOchFiraText} 
+              alt="Kom och fira oss!" 
+              className="h-16 md:h-24 w-auto"
+              style={{
+                filter: 'brightness(0) saturate(100%) invert(28%) sepia(93%) saturate(1045%) hue-rotate(314deg) brightness(91%) contrast(96%)'
+              }}
+            />
           </div>
 
           {/* Couple Image with Speech Bubbles */}
