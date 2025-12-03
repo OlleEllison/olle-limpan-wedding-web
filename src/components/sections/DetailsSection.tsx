@@ -111,7 +111,7 @@ export const DetailsSection: React.FC = () => {
                     <detail.icon className="text-primary" size={24} />
                   </div>
                 </div>
-                <h3 className="font-handwritten text-xl md:text-2xl text-black">
+                <h3 className="font-body font-bold text-xl md:text-2xl text-black">
                   {detail.title}
                 </h3>
                 <div className="space-y-2">
