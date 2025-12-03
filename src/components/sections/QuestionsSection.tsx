@@ -11,7 +11,7 @@ export const QuestionsSection: React.FC = () => {
         <div className="max-w-4xl mx-auto space-y-6">
           {/* Questions Header */}
           <div className="text-center space-y-4">
-            <h2 className="font-body font-bold text-3xl md:text-4xl text-primary">
+            <h2 className="font-handwritten text-3xl md:text-4xl text-primary">
               Frågor
             </h2>
             <div className="flex items-center justify-center gap-3 text-lg text-muted-foreground">
@@ -30,7 +30,7 @@ export const QuestionsSection: React.FC = () => {
 
           {/* Vi ses snart text */}
           <div className="text-center">
-            <p className="font-body font-bold text-3xl md:text-4xl text-primary">
+            <p className="font-handwritten text-3xl md:text-4xl text-primary">
               Vi ses snart!
             </p>
           </div>

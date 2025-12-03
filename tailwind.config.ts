@@ -112,7 +112,6 @@ export default {
       },
       fontFamily: {
         handwritten: ['Dancing Script', 'cursive'],
-        body: ['Indie Flower', 'cursive'],
         sans: ['Inter', 'sans-serif'],
       },
       backgroundImage: {
