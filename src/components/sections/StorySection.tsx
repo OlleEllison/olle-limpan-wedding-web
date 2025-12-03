@@ -9,7 +9,7 @@ export const StorySection: React.FC = () => {
         <div className="max-w-4xl mx-auto text-center space-y-12">
           {/* Section Header */}
           <div className="space-y-4">
-            <h2 className="font-handwritten text-xl md:text-2xl text-primary">
+            <h2 className="font-body font-bold text-xl md:text-2xl text-primary">
               Vår Historia
             </h2>
             <p className="text-base text-muted-foreground">
@@ -62,7 +62,7 @@ export const StorySection: React.FC = () => {
 
           {/* Quote */}
           <div className="bg-transparent backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-primary/20">
-            <blockquote className="font-handwritten text-3xl md:text-4xl text-primary text-center leading-relaxed">
+            <blockquote className="font-body font-bold text-3xl md:text-4xl text-primary text-center leading-relaxed">
               "Tillsammans är vi perfekta"
             </blockquote>
             <cite className="block text-center text-muted-foreground mt-4 text-lg">
@@ -73,15 +73,15 @@ export const StorySection: React.FC = () => {
           {/* Fun Facts */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="text-center space-y-2">
-              <div className="text-4xl font-handwritten text-primary">X</div>
+              <div className="text-4xl font-body font-bold text-primary">X</div>
               <div className="text-sm text-muted-foreground">År tillsammans</div>
             </div>
             <div className="text-center space-y-2">
-              <div className="text-4xl font-handwritten text-primary">∞</div>
+              <div className="text-4xl font-body font-bold text-primary">∞</div>
               <div className="text-sm text-muted-foreground">Minnen skapade</div>
             </div>
             <div className="text-center space-y-2">
-              <div className="text-4xl font-handwritten text-primary">1</div>
+              <div className="text-4xl font-body font-bold text-primary">1</div>
               <div className="text-sm text-muted-foreground">Stor kärlek</div>
             </div>
           </div>

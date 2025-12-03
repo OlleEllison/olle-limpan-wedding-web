@@ -93,7 +93,7 @@ export const DetailsSection: React.FC = () => {
         <div className="max-w-4xl mx-auto space-y-8">
           {/* Section Header */}
           <div className="text-center space-y-4">
-            <h2 className="font-handwritten text-3xl md:text-4xl text-primary">
+            <h2 className="font-body font-bold text-3xl md:text-4xl text-primary">
               Bröllopsdetaljer
             </h2>
           </div>

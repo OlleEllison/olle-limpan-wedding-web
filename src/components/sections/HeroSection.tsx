@@ -74,16 +74,16 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onRSVPClick }) => {
             </div>
           </div>
 
-          {/* Wedding Date - Handwritten Font */}
+          {/* Wedding Date - Indie Flower Font */}
           <div className="text-center my-8">
-            <p className="font-handwritten text-3xl md:text-4xl text-primary">15 Augusti 2026</p>
-            <p className="font-handwritten text-xl md:text-2xl text-muted-foreground mt-2">Väddö</p>
+            <p className="font-body font-bold text-3xl md:text-4xl text-primary">15 Augusti 2026</p>
+            <p className="font-body font-bold text-xl md:text-2xl text-muted-foreground mt-2">Väddö</p>
           </div>
 
           {/* Countdown with Calendar Button */}
           <div className="bg-gradient-romantic text-white rounded-2xl p-6 shadow-xl relative">
             <div className={`flex ${isMobile ? 'flex-col' : 'items-center justify-center'} gap-4`}>
-              <p className="text-3xl md:text-4xl font-bold font-handwritten text-center flex-1">{daysLeft} dagar kvar</p>
+              <p className="text-3xl md:text-4xl font-bold font-body text-center flex-1">{daysLeft} dagar kvar</p>
               <Button
                 variant="ghost"
                 size="sm"

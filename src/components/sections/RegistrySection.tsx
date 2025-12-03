@@ -34,7 +34,7 @@ export const RegistrySection: React.FC = () => {
         <div className="max-w-4xl mx-auto space-y-12">
           {/* Section Header */}
           <div className="text-center space-y-4">
-            <h2 className="font-handwritten text-xl md:text-2xl text-primary">
+            <h2 className="font-body font-bold text-xl md:text-2xl text-primary">
               Önskelista
             </h2>
             <p className="text-base text-muted-foreground">
@@ -122,7 +122,7 @@ export const RegistrySection: React.FC = () => {
           {/* Thank You Message */}
           <div className="text-center space-y-4">
             <div className="inline-block bg-wedding-cream border-2 border-dashed border-primary/30 rounded-2xl p-6 transform -rotate-1 shadow-lg">
-              <p className="font-handwritten text-2xl text-primary">
+              <p className="font-body font-bold text-2xl text-primary">
                 Tack för er generositet! 💕
               </p>
             </div>
