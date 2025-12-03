@@ -48,7 +48,7 @@ export const RegistrySection: React.FC = () => {
               <Heart className="text-primary" size={32} />
             </div>
             <div className="space-y-4">
-              <h3 className="font-handwritten text-lg text-primary">
+              <h3 className="font-body font-bold text-lg text-primary">
                 Kära vänner och familj
               </h3>
               <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
@@ -83,7 +83,7 @@ export const RegistrySection: React.FC = () => {
                   }`}>
                     <option.icon className="text-primary" size={24} />
                   </div>
-                  <CardTitle className="font-handwritten text-2xl text-secondary">
+                  <CardTitle className="font-body font-bold text-2xl text-secondary">
                     {option.title}
                   </CardTitle>
                 </CardHeader>
