@@ -25,7 +25,7 @@ export const StorySection: React.FC = () => {
                 <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
                   <Heart className="text-primary" size={24} />
                 </div>
-                <h3 className="font-handwritten text-lg text-secondary">
+                <h3 className="font-body font-bold text-lg text-secondary">
                   Första Intrycket
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -45,7 +45,7 @@ export const StorySection: React.FC = () => {
                 <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto">
                   <Star className="text-secondary" size={24} />
                 </div>
-                <h3 className="font-handwritten text-lg text-secondary">
+                <h3 className="font-body font-bold text-lg text-secondary">
                   Frieriet
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
