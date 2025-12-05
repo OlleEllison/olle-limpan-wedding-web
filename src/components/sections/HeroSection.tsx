@@ -50,7 +50,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onRSVPClick }) => {
             {/* Left Speech Bubble */}
             <div className={`absolute z-10 transform -rotate-12 ${isMobile ? 'left-2 top-8 scale-75' : 'left-36 top-16 scale-150'}`}>
             <div className="bg-white border-2 border-black rounded-lg px-6 py-3 relative shadow-lg">
-                <p className="font-handwritten text-[12px] text-black whitespace-nowrap">Mer info kommer!</p>
+                <p className="font-speech-bubble text-[12px] text-black whitespace-nowrap">Mer info kommer!</p>
                 <div className="absolute bottom-[-8px] right-6 w-0 h-0 border-l-[8px] border-l-transparent border-r-[8px] border-r-transparent border-t-[8px] border-t-white"></div>
                 <div className="absolute bottom-[-10px] right-6 w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-t-[10px] border-t-black"></div>
               </div>
@@ -67,7 +67,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onRSVPClick }) => {
             {/* Right Speech Bubble */}
             <div className={`absolute z-10 transform rotate-12 ${isMobile ? 'right-2 top-8 scale-75' : 'right-36 top-16 scale-150'}`}>
             <div className="bg-white border-2 border-black rounded-lg px-6 py-3 relative shadow-lg">
-                <p className="font-handwritten text-[12px] text-black whitespace-nowrap">Kom igen det blir kul!</p>
+                <p className="font-speech-bubble text-[12px] text-black whitespace-nowrap">Kom igen det blir kul!</p>
                 <div className="absolute bottom-[-8px] left-6 w-0 h-0 border-l-[8px] border-l-transparent border-r-[8px] border-r-transparent border-t-[8px] border-t-white"></div>
                 <div className="absolute bottom-[-10px] left-6 w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-t-[10px] border-t-black"></div>
               </div>
