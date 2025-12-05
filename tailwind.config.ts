@@ -111,7 +111,8 @@ export default {
         "slide-up": "slide-up 0.6s ease-out",
       },
       fontFamily: {
-        handwritten: ['Indie Flower', 'cursive'],
+        handwritten: ['Dancing Script', 'cursive'],
+        'speech-bubble': ['Indie Flower', 'cursive'],
         sans: ['Inter', 'sans-serif'],
       },
       backgroundImage: {
