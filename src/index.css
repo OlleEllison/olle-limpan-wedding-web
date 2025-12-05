@@ -10,46 +10,46 @@ All colors MUST be HSL.
   :root {
     /* Green Color Scheme - Based on Flower Stems */
     --background: 60 20% 98%;
-    --foreground: 95 35% 25%;
+    --foreground: 95 40% 38%;
 
     --card: 60 15% 99%;
-    --card-foreground: 95 40% 22%;
+    --card-foreground: 95 40% 38%;
 
     --popover: 60 15% 99%;
-    --popover-foreground: 95 40% 22%;
+    --popover-foreground: 95 40% 38%;
 
-    /* Primary - Dark Green (for headers) */
-    --primary: 95 45% 28%;
+    /* Primary - Dark Green (for headers and sub-headers) */
+    --primary: 95 45% 25%;
     --primary-foreground: 0 0% 100%;
-    --primary-light: 95 40% 45%;
+    --primary-light: 95 40% 50%;
 
     /* Secondary - Darkest Green (for countdown) */
     --secondary: 95 50% 18%;
     --secondary-foreground: 0 0% 100%;
 
     --muted: 95 15% 94%;
-    --muted-foreground: 95 30% 35%;
+    --muted-foreground: 95 40% 38%;
 
     --accent: 95 20% 92%;
-    --accent-foreground: 95 40% 22%;
+    --accent-foreground: 95 40% 38%;
 
     --destructive: 0 60% 55%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 95 15% 85%;
     --input: 95 15% 92%;
-    --ring: 95 45% 28%;
+    --ring: 95 45% 25%;
 
     --radius: 0.75rem;
     
     /* Wedding Specific - Green Theme */
-    --wedding-pink: 95 35% 45%;
+    --wedding-pink: 95 40% 50%;
     --wedding-navy: 95 50% 18%;
     --wedding-cream: 60 20% 97%;
-    --wedding-gold: 95 25% 55%;
+    --wedding-gold: 95 30% 55%;
     
     /* Gradients - Green */
-    --gradient-romantic: linear-gradient(135deg, hsl(95 50% 18%) 0%, hsl(95 45% 28%) 100%);
+    --gradient-romantic: linear-gradient(135deg, hsl(95 50% 18%) 0%, hsl(95 45% 25%) 100%);
     --gradient-soft: linear-gradient(180deg, hsl(var(--wedding-cream)) 0%, hsl(var(--background)) 100%);
     
     /* Animations */
@@ -57,7 +57,7 @@ All colors MUST be HSL.
     --bounce-gentle: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --sidebar-background: 60 15% 98%;
-    --sidebar-foreground: 95 30% 26%;
+    --sidebar-foreground: 95 40% 38%;
     --sidebar-primary: 95 45% 20%;
     --sidebar-primary-foreground: 0 0% 98%;
     --sidebar-accent: 95 15% 94%;
@@ -125,7 +125,8 @@ All colors MUST be HSL.
     background-position: center center;
     background-repeat: no-repeat;
     z-index: -1;
-    opacity: 0.95;
+    opacity: 0.85;
+    filter: sepia(20%) saturate(150%) hue-rotate(60deg) brightness(1.05);
   }
   
   /* Parallax wrapper */
