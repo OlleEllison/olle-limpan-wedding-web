@@ -81,13 +81,13 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onRSVPClick }) => {
             </div>
 
             {/* Rotating Gallery */}
-            <div className="relative w-64 md:w-80 h-80 md:h-96 rounded-2xl shadow-xl overflow-hidden bg-white/50">
+            <div className="relative w-64 md:w-80 h-80 md:h-96 rounded-lg shadow-xl overflow-hidden">
               {galleryImages.map((image, index) => (
                 <img
                   key={index}
                   src={image}
                   alt={`Ellison och Olle ${index + 1}`}
-                  className={`absolute inset-0 w-full h-full object-contain rounded-2xl transition-opacity duration-[3500ms] ease-in-out ${
+                  className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-[7000ms] ease-in-out ${
                     index === currentImageIndex ? 'opacity-100' : 'opacity-0'
                   }`}
                 />
