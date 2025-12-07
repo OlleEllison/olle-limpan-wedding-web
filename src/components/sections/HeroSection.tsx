@@ -37,7 +37,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onRSVPClick }) => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prev) => (prev + 1) % galleryImages.length);
-    }, 10000);
+    }, 5000);
     
     return () => clearInterval(interval);
   }, []);
@@ -81,13 +81,13 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onRSVPClick }) => {
             </div>
 
             {/* Rotating Gallery */}
-            <div className="relative w-64 md:w-80 h-80 md:h-96 rounded-lg shadow-xl overflow-hidden">
+            <div className="relative w-64 md:w-80 h-80 md:h-96 rounded-lg shadow-xl overflow-hidden bg-white/50">
               {galleryImages.map((image, index) => (
                 <img
                   key={index}
                   src={image}
                   alt={`Ellison och Olle ${index + 1}`}
-                  className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+                  className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-1000 ${
                     index === currentImageIndex ? 'opacity-100' : 'opacity-0'
                   }`}
                 />
