@@ -87,7 +87,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onRSVPClick }) => {
                   key={index}
                   src={image}
                   alt={`Ellison och Olle ${index + 1}`}
-                  className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-[3000ms] ease-in-out ${
+                  className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-[4500ms] ease-in-out ${
                     index === currentImageIndex ? 'opacity-100' : 'opacity-0'
                   }`}
                 />
