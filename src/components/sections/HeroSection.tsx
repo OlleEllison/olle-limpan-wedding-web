@@ -33,14 +33,22 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onRSVPClick }) => {
   const daysLeft = Math.ceil((weddingDate.getTime() - now.getTime()) / (1000 * 60 * 60 * 24));
   
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [nextImageIndex, setNextImageIndex] = useState(1);
+  const [isTransitioning, setIsTransitioning] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentImageIndex((prev) => (prev + 1) % galleryImages.length);
+      setIsTransitioning(true);
+      
+      setTimeout(() => {
+        setCurrentImageIndex(nextImageIndex);
+        setNextImageIndex((nextImageIndex + 1) % galleryImages.length);
+        setIsTransitioning(false);
+      }, 4500); // Match transition duration
     }, 7000);
     
     return () => clearInterval(interval);
-  }, []);
+  }, [nextImageIndex]);
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
@@ -82,16 +90,20 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onRSVPClick }) => {
 
             {/* Rotating Gallery */}
             <div className="relative w-64 md:w-80 h-80 md:h-96 rounded-lg shadow-xl overflow-hidden">
-              {galleryImages.map((image, index) => (
-                <img
-                  key={index}
-                  src={image}
-                  alt={`Ellison och Olle ${index + 1}`}
-                  className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-[4500ms] ease-in-out ${
-                    index === currentImageIndex ? 'opacity-100' : 'opacity-0'
-                  }`}
-                />
-              ))}
+              {/* Current image */}
+              <img
+                src={galleryImages[currentImageIndex]}
+                alt={`Ellison och Olle ${currentImageIndex + 1}`}
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+              {/* Next image - fades in on top */}
+              <img
+                src={galleryImages[nextImageIndex]}
+                alt={`Ellison och Olle ${nextImageIndex + 1}`}
+                className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-[4500ms] ease-in-out ${
+                  isTransitioning ? 'opacity-100' : 'opacity-0'
+                }`}
+              />
             </div>
 
             {/* Right Speech Bubble */}
