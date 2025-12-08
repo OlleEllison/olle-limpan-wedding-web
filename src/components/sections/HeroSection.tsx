@@ -33,22 +33,14 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onRSVPClick }) => {
   const daysLeft = Math.ceil((weddingDate.getTime() - now.getTime()) / (1000 * 60 * 60 * 24));
   
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [nextImageIndex, setNextImageIndex] = useState(1);
-  const [isTransitioning, setIsTransitioning] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setIsTransitioning(true);
-      
-      setTimeout(() => {
-        setCurrentImageIndex(nextImageIndex);
-        setNextImageIndex((nextImageIndex + 1) % galleryImages.length);
-        setIsTransitioning(false);
-      }, 4500); // Match transition duration
-    }, 7000);
+      setCurrentImageIndex((prev) => (prev + 1) % galleryImages.length);
+    }, 10000);
     
     return () => clearInterval(interval);
-  }, [nextImageIndex]);
+  }, []);
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
@@ -80,7 +72,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onRSVPClick }) => {
           {/* Couple Image Gallery with Speech Bubbles */}
           <div className="relative flex justify-center items-center my-12">
             {/* Left Speech Bubble */}
-            <div className={`absolute z-10 transform -rotate-12 ${isMobile ? 'left-4 -top-4 scale-75' : 'left-52 -top-4 scale-150'}`}>
+            <div className={`absolute z-10 transform -rotate-12 ${isMobile ? 'left-2 top-8 scale-75' : 'left-36 top-16 scale-150'}`}>
               <div className="bg-white border-2 border-primary rounded-lg px-6 py-3 relative shadow-lg">
                 <p className="font-speech-bubble text-[12px] text-primary whitespace-nowrap">Mer info kommer!</p>
                 <div className="absolute bottom-[-8px] right-6 w-0 h-0 border-l-[8px] border-l-transparent border-r-[8px] border-r-transparent border-t-[8px] border-t-white"></div>
@@ -90,24 +82,20 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onRSVPClick }) => {
 
             {/* Rotating Gallery */}
             <div className="relative w-64 md:w-80 h-80 md:h-96 rounded-lg shadow-xl overflow-hidden">
-              {/* Current image */}
-              <img
-                src={galleryImages[currentImageIndex]}
-                alt={`Ellison och Olle ${currentImageIndex + 1}`}
-                className="absolute inset-0 w-full h-full object-cover"
-              />
-              {/* Next image - fades in on top */}
-              <img
-                src={galleryImages[nextImageIndex]}
-                alt={`Ellison och Olle ${nextImageIndex + 1}`}
-                className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-[4500ms] ease-in-out ${
-                  isTransitioning ? 'opacity-100' : 'opacity-0'
-                }`}
-              />
+              {galleryImages.map((image, index) => (
+                <img
+                  key={index}
+                  src={image}
+                  alt={`Ellison och Olle ${index + 1}`}
+                  className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+                    index === currentImageIndex ? 'opacity-100' : 'opacity-0'
+                  }`}
+                />
+              ))}
             </div>
 
             {/* Right Speech Bubble */}
-            <div className={`absolute z-10 transform rotate-12 ${isMobile ? 'right-4 -top-4 scale-75' : 'right-52 -top-4 scale-150'}`}>
+            <div className={`absolute z-10 transform rotate-12 ${isMobile ? 'right-2 top-8 scale-75' : 'right-36 top-16 scale-150'}`}>
               <div className="bg-white border-2 border-primary rounded-lg px-6 py-3 relative shadow-lg">
                 <p className="font-speech-bubble text-[12px] text-primary whitespace-nowrap">Kom igen det blir kul!</p>
                 <div className="absolute bottom-[-8px] left-6 w-0 h-0 border-l-[8px] border-l-transparent border-r-[8px] border-r-transparent border-t-[8px] border-t-white"></div>
