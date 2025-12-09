@@ -3,7 +3,7 @@ import { Navigation } from '@/components/Navigation';
 import { HeroSection } from '@/components/sections/HeroSection';
 import { DetailsSection } from '@/components/sections/DetailsSection';
 import { RSVPSection } from '@/components/sections/RSVPSection';
-import { QuestionsSection } from '@/components/sections/QuestionsSection';
+
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState('home');
@@ -45,7 +45,7 @@ const Index = () => {
         <HeroSection onRSVPClick={handleRSVPClick} />
         <DetailsSection />
         <RSVPSection />
-        <QuestionsSection />
+        
       </main>
     </div>
   );
