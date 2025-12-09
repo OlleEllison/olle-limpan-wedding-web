@@ -110,10 +110,63 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onRSVPClick }) => {
             <p className="font-handwritten text-xl md:text-2xl text-muted-foreground mt-2">Väddö</p>
           </div>
 
-          {/* Countdown with Calendar Button */}
-          <div className="bg-gradient-romantic text-white rounded-2xl p-6 shadow-xl relative">
-            <div className={`flex ${isMobile ? 'flex-col' : 'items-center justify-center'} gap-4`}>
-              <p className="text-3xl md:text-4xl font-bold font-handwritten text-center flex-1">{daysLeft} dagar kvar</p>
+          {/* STYLE 1: Floating Tag Style */}
+          <div className="space-y-4 mb-12">
+            <p className="text-sm text-muted-foreground text-center">Style 1: Floating Tag</p>
+            <div className="flex justify-center">
+              <div className="bg-secondary text-white rounded-full px-8 py-4 shadow-lg inline-flex items-center gap-4">
+                <p className="text-2xl md:text-3xl font-bold font-handwritten">{daysLeft} dagar kvar</p>
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={() => {
+                    const link = document.createElement('a');
+                    link.href = '/savethedate.ics';
+                    link.download = 'savethedate.ics';
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                  }}
+                  className="bg-white/20 text-white hover:bg-white/30 rounded-full h-auto py-2 px-3"
+                >
+                  <Calendar className="w-4 h-4" />
+                </Button>
+              </div>
+            </div>
+          </div>
+
+          {/* STYLE 2: Glass Effect */}
+          <div className="space-y-4 mb-12">
+            <p className="text-sm text-muted-foreground text-center">Style 2: Glass Effect</p>
+            <div className="backdrop-blur-md bg-white/30 border border-white/50 text-primary rounded-2xl p-6 shadow-xl relative">
+              <div className={`flex ${isMobile ? 'flex-col' : 'items-center justify-center'} gap-4`}>
+                <p className="text-3xl md:text-4xl font-bold font-handwritten text-center flex-1">{daysLeft} dagar kvar</p>
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={() => {
+                    const link = document.createElement('a');
+                    link.href = '/savethedate.ics';
+                    link.download = 'savethedate.ics';
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                  }}
+                  className={`bg-primary/20 border border-primary/50 text-primary hover:bg-primary/30 flex flex-col items-center gap-0.5 h-auto py-2 px-3 ${!isMobile ? 'absolute right-4 top-1/2 -translate-y-1/2' : ''}`}
+                >
+                  <Calendar className="w-4 h-4" />
+                  <span className="text-xs">Lägg till i kalender</span>
+                </Button>
+              </div>
+            </div>
+          </div>
+
+          {/* STYLE 3: Handwritten Emphasis */}
+          <div className="space-y-4 mb-12">
+            <p className="text-sm text-muted-foreground text-center">Style 3: Handwritten Emphasis</p>
+            <div className="text-center py-8">
+              <p className="text-5xl md:text-6xl font-handwritten text-primary mb-2">{daysLeft} dagar kvar</p>
+              <div className="w-48 h-1 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto mb-4"></div>
               <Button
                 variant="ghost"
                 size="sm"
@@ -125,11 +178,66 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onRSVPClick }) => {
                   link.click();
                   document.body.removeChild(link);
                 }}
-                className={`bg-transparent border border-white text-white hover:bg-white/10 flex flex-col items-center gap-0.5 h-auto py-2 px-3 ${!isMobile ? 'absolute right-4 top-1/2 -translate-y-1/2' : ''}`}
+                className="text-primary hover:bg-primary/10 gap-2"
               >
                 <Calendar className="w-4 h-4" />
-                <span className="text-xs">Lägg till i kalender</span>
+                <span className="text-sm">Lägg till i kalender</span>
               </Button>
+            </div>
+          </div>
+
+          {/* STYLE 4: Ribbon/Banner Style */}
+          <div className="space-y-4 mb-12">
+            <p className="text-sm text-muted-foreground text-center">Style 4: Ribbon Banner</p>
+            <div className="relative flex justify-center">
+              <div className="relative">
+                <div className="absolute -left-4 top-0 bottom-0 w-4 bg-secondary/80 skew-y-[20deg] origin-right"></div>
+                <div className="absolute -right-4 top-0 bottom-0 w-4 bg-secondary/80 -skew-y-[20deg] origin-left"></div>
+                <div className="bg-secondary text-white px-12 py-4 shadow-lg flex items-center gap-6">
+                  <p className="text-2xl md:text-3xl font-bold font-handwritten">{daysLeft} dagar kvar</p>
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    onClick={() => {
+                      const link = document.createElement('a');
+                      link.href = '/savethedate.ics';
+                      link.download = 'savethedate.ics';
+                      document.body.appendChild(link);
+                      link.click();
+                      document.body.removeChild(link);
+                    }}
+                    className="bg-white/20 text-white hover:bg-white/30 h-auto py-2 px-3"
+                  >
+                    <Calendar className="w-4 h-4" />
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* STYLE 5: Outlined/Ghost Style */}
+          <div className="space-y-4 mb-12">
+            <p className="text-sm text-muted-foreground text-center">Style 5: Outlined Ghost</p>
+            <div className="border-2 border-primary bg-transparent rounded-2xl p-6 relative">
+              <div className={`flex ${isMobile ? 'flex-col' : 'items-center justify-center'} gap-4`}>
+                <p className="text-3xl md:text-4xl font-bold font-handwritten text-primary text-center flex-1">{daysLeft} dagar kvar</p>
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={() => {
+                    const link = document.createElement('a');
+                    link.href = '/savethedate.ics';
+                    link.download = 'savethedate.ics';
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                  }}
+                  className={`border border-primary text-primary hover:bg-primary/10 flex flex-col items-center gap-0.5 h-auto py-2 px-3 ${!isMobile ? 'absolute right-4 top-1/2 -translate-y-1/2' : ''}`}
+                >
+                  <Calendar className="w-4 h-4" />
+                  <span className="text-xs">Lägg till i kalender</span>
+                </Button>
+              </div>
             </div>
           </div>
 
