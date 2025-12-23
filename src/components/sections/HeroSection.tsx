@@ -37,7 +37,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onRSVPClick }) => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prev) => (prev + 1) % galleryImages.length);
-    }, 10000);
+    }, 5000);
     
     return () => clearInterval(interval);
   }, []);
