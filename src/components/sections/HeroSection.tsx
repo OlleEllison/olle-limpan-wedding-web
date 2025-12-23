@@ -16,10 +16,13 @@ import gallery7 from '@/assets/gallery/gallery-7.jpeg';
 import gallery8 from '@/assets/gallery/gallery-8.jpeg';
 import gallery9 from '@/assets/gallery/gallery-9.jpeg';
 import gallery10 from '@/assets/gallery/gallery-10.jpeg';
+import gallery11 from '@/assets/gallery/gallery-11.jpeg';
+import gallery12 from '@/assets/gallery/gallery-12.jpeg';
 
 const galleryImages = [
   gallery1, gallery2, gallery3, gallery4, gallery5,
-  gallery6, gallery7, gallery8, gallery9, gallery10
+  gallery6, gallery7, gallery8, gallery9, gallery10,
+  gallery11, gallery12
 ];
 
 interface HeroSectionProps {
