@@ -114,6 +114,7 @@ export default {
         handwritten: ['Dancing Script', 'cursive'],
         'speech-bubble': ['Indie Flower', 'cursive'],
         sans: ['Inter', 'sans-serif'],
+        'lemon-milk': ['Lemon Milk', 'sans-serif'],
       },
       backgroundImage: {
         'gradient-romantic': 'var(--gradient-romantic)',
