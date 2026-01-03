@@ -21,6 +21,14 @@
 
 @font-face {
   font-family: 'Lemon Milk';
+  src: url('/fonts/LemonMilk-LightItalic.otf') format('opentype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lemon Milk';
   src: url('/fonts/LemonMilk-Medium.otf') format('opentype');
   font-weight: 500;
   font-style: normal;
