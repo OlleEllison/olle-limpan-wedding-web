@@ -93,7 +93,7 @@ export const DetailsSection: React.FC = () => {
         <div className="max-w-4xl mx-auto space-y-8">
           {/* Section Header */}
           <div className="text-center space-y-4">
-            <h2 className="font-lemon-milk text-3xl md:text-4xl text-primary">
+            <h2 className="font-lemon-milk text-[14px] md:text-[18px] text-primary">
               Bröllopsdetaljer
             </h2>
           </div>
@@ -111,7 +111,7 @@ export const DetailsSection: React.FC = () => {
                     <detail.icon className="text-primary" size={24} />
                   </div>
                 </div>
-                <h3 className="font-lemon-milk text-xl md:text-2xl text-black">
+                <h3 className="font-lemon-milk text-[12px] text-black">
                   {detail.title}
                 </h3>
                 <div className="space-y-2">
