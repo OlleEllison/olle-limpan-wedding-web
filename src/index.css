@@ -139,7 +139,7 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
     font-family: 'Lemon Milk', 'Times New Roman', Times, serif;
     font-weight: 300;
-    font-size: 12px;
+    font-size: 10px;
     line-height: 1;
     position: relative;
     overflow-x: hidden;
