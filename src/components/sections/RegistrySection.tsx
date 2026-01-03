@@ -34,10 +34,10 @@ export const RegistrySection: React.FC = () => {
         <div className="max-w-4xl mx-auto space-y-12">
           {/* Section Header */}
           <div className="text-center space-y-4">
-            <h2 className="font-lemon-milk text-[18px] text-primary">
+            <h2 className="font-lemon-milk font-normal text-[18px] text-primary">
               Önskelista
             </h2>
-            <p className="text-base text-muted-foreground">
+            <p className="text-[10px] text-muted-foreground">
               Er närvaro är den bästa presenten, men...
             </p>
           </div>
@@ -48,10 +48,10 @@ export const RegistrySection: React.FC = () => {
               <Heart className="text-primary" size={32} />
             </div>
             <div className="space-y-4">
-              <h3 className="font-lemon-milk text-[14px] text-primary">
+              <h3 className="font-lemon-milk font-normal text-[14px] text-primary">
                 Kära vänner och familj
               </h3>
-              <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
+              <p className="text-[10px] text-muted-foreground leading-relaxed max-w-2xl mx-auto">
                 Er närvaro på vår bröllopsdag är verkligen den bästa presenten vi kan få. 
                 Om ni ändå vill ge oss något, skulle vi vara så tacksamma för bidrag till 
                 vår smekmånad eller något från våra önskelistor nedan.
@@ -83,12 +83,12 @@ export const RegistrySection: React.FC = () => {
                   }`}>
                     <option.icon className="text-primary" size={24} />
                   </div>
-                  <CardTitle className="font-lemon-milk text-[14px] text-secondary">
+                  <CardTitle className="font-lemon-milk font-normal text-[14px] text-secondary">
                     {option.title}
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="text-center space-y-4">
-                  <p className="text-muted-foreground text-sm">
+                  <p className="text-muted-foreground text-[10px]">
                     {option.description}
                   </p>
                   
@@ -122,11 +122,11 @@ export const RegistrySection: React.FC = () => {
           {/* Thank You Message */}
           <div className="text-center space-y-4">
             <div className="inline-block bg-wedding-cream border-2 border-dashed border-primary/30 rounded-2xl p-6 transform -rotate-1 shadow-lg">
-              <p className="font-lemon-milk text-[18px] text-primary">
+              <p className="font-lemon-milk font-normal text-[18px] text-primary">
                 Tack för er generositet! 💕
               </p>
             </div>
-            <p className="text-muted-foreground">
+            <p className="text-[10px] text-muted-foreground">
               Har ni frågor om önskelistan? Kontakta oss gärna!
             </p>
           </div>

@@ -9,10 +9,10 @@ export const StorySection: React.FC = () => {
         <div className="max-w-4xl mx-auto text-center space-y-12">
           {/* Section Header */}
           <div className="space-y-4">
-            <h2 className="font-lemon-milk text-[18px] text-primary">
+            <h2 className="font-lemon-milk font-normal text-[18px] text-primary">
               Vår Historia
             </h2>
-            <p className="text-base text-muted-foreground">
+            <p className="text-[10px] text-muted-foreground">
               Från första intryck till för alltid
             </p>
           </div>
@@ -25,10 +25,10 @@ export const StorySection: React.FC = () => {
                 <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
                   <Heart className="text-primary" size={24} />
                 </div>
-                <h3 className="font-lemon-milk text-[14px] text-secondary">
+                <h3 className="font-lemon-milk font-normal text-[14px] text-secondary">
                   Första Intrycket
                 </h3>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-[10px] text-muted-foreground leading-relaxed">
                   Det var kärlek vid första ögonkastet när vi träffades... 
                   Berätta er egen historia här om hur ni träffades och 
                   vad som gjorde det speciellt.
@@ -45,10 +45,10 @@ export const StorySection: React.FC = () => {
                 <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto">
                   <Star className="text-secondary" size={24} />
                 </div>
-                <h3 className="font-lemon-milk text-[14px] text-secondary">
+                <h3 className="font-lemon-milk font-normal text-[14px] text-secondary">
                   Frieriet
                 </h3>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-[10px] text-muted-foreground leading-relaxed">
                   En magisk dag när Olle friade till Ellison... 
                   Berätta historien om frieriet och vad som gjorde 
                   den stunden så särskild.
@@ -62,10 +62,10 @@ export const StorySection: React.FC = () => {
 
           {/* Quote */}
           <div className="bg-transparent backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-primary/20">
-            <blockquote className="font-lemon-milk text-[18px] text-primary text-center leading-relaxed">
+            <blockquote className="font-lemon-milk font-normal text-[18px] text-primary text-center leading-relaxed">
               "Tillsammans är vi perfekta"
             </blockquote>
-            <cite className="block text-center text-muted-foreground mt-4 text-lg">
+            <cite className="block text-center text-muted-foreground mt-4 text-[10px]">
               - Ellison & Olle
             </cite>
           </div>
@@ -73,16 +73,16 @@ export const StorySection: React.FC = () => {
           {/* Fun Facts */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="text-center space-y-2">
-              <div className="text-[18px] font-lemon-milk text-primary">X</div>
-              <div className="text-sm text-muted-foreground">År tillsammans</div>
+              <div className="text-[18px] font-lemon-milk font-normal text-primary">X</div>
+              <div className="text-[10px] text-muted-foreground">År tillsammans</div>
             </div>
             <div className="text-center space-y-2">
-              <div className="text-[18px] font-lemon-milk text-primary">∞</div>
-              <div className="text-sm text-muted-foreground">Minnen skapade</div>
+              <div className="text-[18px] font-lemon-milk font-normal text-primary">∞</div>
+              <div className="text-[10px] text-muted-foreground">Minnen skapade</div>
             </div>
             <div className="text-center space-y-2">
-              <div className="text-[18px] font-lemon-milk text-primary">1</div>
-              <div className="text-sm text-muted-foreground">Stor kärlek</div>
+              <div className="text-[18px] font-lemon-milk font-normal text-primary">1</div>
+              <div className="text-[10px] text-muted-foreground">Stor kärlek</div>
             </div>
           </div>
         </div>
