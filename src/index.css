@@ -130,6 +130,7 @@ All colors MUST be HSL.
   body {
     @apply bg-background text-foreground;
     font-family: 'Lemon Milk', 'Times New Roman', Times, serif;
+    font-weight: 300;
     font-size: 12px;
     line-height: 1;
     position: relative;
