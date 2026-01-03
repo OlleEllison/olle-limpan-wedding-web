@@ -93,7 +93,7 @@ export const DetailsSection: React.FC = () => {
         <div className="max-w-4xl mx-auto space-y-8">
           {/* Section Header */}
           <div className="text-center space-y-4">
-            <h2 className="font-lemon-milk text-[18px] text-primary">
+            <h2 className="font-lemon-milk font-normal text-[18px] text-primary">
               Bröllopsdetaljer
             </h2>
           </div>
@@ -111,14 +111,14 @@ export const DetailsSection: React.FC = () => {
                     <detail.icon className="text-primary" size={24} />
                   </div>
                 </div>
-                <h3 className="font-lemon-milk text-[14px] text-black">
+                <h3 className="font-lemon-milk font-normal text-[14px] text-black">
                   {detail.title}
                 </h3>
                 <div className="space-y-2">
                   {detail.content.map((item, itemIndex) => (
                     <p 
                       key={itemIndex} 
-                      className={`${item === '' ? 'h-2' : 'text-lg text-muted-foreground'}`}
+                      className={`${item === '' ? 'h-2' : 'text-[10px] text-muted-foreground'}`}
                     >
                       {item}
                     </p>
@@ -126,7 +126,7 @@ export const DetailsSection: React.FC = () => {
                   {detail.links && detail.links.length > 0 && (
                     <div className="space-y-1">
                       {detail.links.map((link, linkIndex) => (
-                        <p key={linkIndex} className="text-lg text-muted-foreground">
+                        <p key={linkIndex} className="text-[10px] text-muted-foreground">
                           <a 
                             href={link.url} 
                             target="_blank" 

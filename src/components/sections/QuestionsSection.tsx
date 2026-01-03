@@ -11,11 +11,11 @@ export const QuestionsSection: React.FC = () => {
         <div className="max-w-4xl mx-auto space-y-6">
           {/* Questions Header */}
           <div className="text-center space-y-4">
-            <h2 className="font-lemon-milk text-[18px] text-primary">
+            <h2 className="font-lemon-milk font-normal text-[18px] text-primary">
               Frågor
             </h2>
-            <div className="flex items-center justify-center gap-3 text-lg text-muted-foreground">
-              <Mail className="text-primary" size={20} />
+            <div className="flex items-center justify-center gap-3 text-[10px] text-muted-foreground">
+              <Mail className="text-primary" size={16} />
               <p>
                 Har du frågor? Kontakta oss på{' '}
                 <a 
@@ -30,7 +30,7 @@ export const QuestionsSection: React.FC = () => {
 
           {/* Vi ses snart text */}
           <div className="text-center">
-            <p className="font-lemon-milk text-[18px] text-primary">
+            <p className="font-lemon-milk font-normal text-[18px] text-primary">
               Vi ses snart!
             </p>
           </div>

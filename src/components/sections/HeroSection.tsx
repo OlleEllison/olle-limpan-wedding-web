@@ -109,8 +109,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onRSVPClick }) => {
 
           {/* Wedding Date */}
           <div className="text-center my-8">
-            <p className="font-lemon-milk text-[18px] text-primary">15 Augusti 2026</p>
-            <p className="font-lemon-milk text-[14px] text-muted-foreground mt-2">Väddö</p>
+            <p className="font-lemon-milk font-normal text-[18px] text-primary">15 Augusti 2026</p>
+            <p className="font-lemon-milk font-normal text-[14px] text-muted-foreground mt-2">Väddö</p>
           </div>
 
           {/* Countdown - Floating Tag Style */}
