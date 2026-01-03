@@ -77,7 +77,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onRSVPClick }) => {
             {/* Left Speech Bubble */}
             <div className={`absolute z-10 transform -rotate-12 ${isMobile ? 'left-4 -top-4 scale-75' : 'left-48 -top-4 scale-150'}`}>
               <div className="bg-white border-2 border-primary rounded-lg px-6 py-3 relative shadow-lg">
-                <p className="font-speech-bubble text-[12px] text-primary whitespace-nowrap">Mer info kommer!</p>
+                <p className="font-lemon-milk italic font-light text-[12px] text-primary whitespace-nowrap">Mer info kommer!</p>
                 <div className="absolute bottom-[-8px] right-6 w-0 h-0 border-l-[8px] border-l-transparent border-r-[8px] border-r-transparent border-t-[8px] border-t-white"></div>
                 <div className="absolute bottom-[-10px] right-6 w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-t-[10px] border-t-primary"></div>
               </div>
@@ -100,7 +100,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onRSVPClick }) => {
             {/* Right Speech Bubble */}
             <div className={`absolute z-10 transform rotate-12 ${isMobile ? 'right-4 -top-4 scale-75' : 'right-48 -top-4 scale-150'}`}>
               <div className="bg-white border-2 border-primary rounded-lg px-6 py-3 relative shadow-lg">
-                <p className="font-speech-bubble text-[12px] text-primary whitespace-nowrap">Kom igen det blir kul!</p>
+                <p className="font-lemon-milk italic font-light text-[12px] text-primary whitespace-nowrap">Kom igen det blir kul!</p>
                 <div className="absolute bottom-[-8px] left-6 w-0 h-0 border-l-[8px] border-l-transparent border-r-[8px] border-r-transparent border-t-[8px] border-t-white"></div>
                 <div className="absolute bottom-[-10px] left-6 w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-t-[10px] border-t-primary"></div>
               </div>
@@ -109,14 +109,14 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onRSVPClick }) => {
 
           {/* Wedding Date */}
           <div className="text-center my-8">
-            <p className="font-lemon-milk text-3xl md:text-4xl text-primary">15 Augusti 2026</p>
-            <p className="font-lemon-milk text-xl md:text-2xl text-muted-foreground mt-2">Väddö</p>
+            <p className="font-lemon-milk text-[26px] md:text-[30px] text-primary">15 Augusti 2026</p>
+            <p className="font-lemon-milk text-[16px] md:text-[20px] text-muted-foreground mt-2">Väddö</p>
           </div>
 
           {/* Countdown - Floating Tag Style */}
           <div className="flex justify-center mb-12">
             <div className="bg-secondary text-white rounded-full px-8 py-4 shadow-lg inline-flex items-center gap-4">
-              <p className="text-2xl md:text-3xl font-bold font-lemon-milk">{daysLeft} dagar kvar</p>
+              <p className="text-2xl md:text-3xl font-lemon-milk font-normal">{daysLeft} dagar kvar</p>
               <Button
                 variant="ghost"
                 size="sm"

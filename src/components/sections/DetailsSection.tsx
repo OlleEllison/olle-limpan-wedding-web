@@ -1,5 +1,5 @@
 import React from 'react';
-import { Clock, MapPin, Shirt, Music, Utensils, AlertTriangle, Gift } from 'lucide-react';
+import { Clock, MapPin, Shirt, Music, House, AlertTriangle, Gift } from 'lucide-react';
 
 interface DetailLink {
   name: string;
@@ -45,7 +45,7 @@ export const DetailsSection: React.FC = () => {
     },
     {
       id: 'accommodation',
-      icon: Utensils,
+      icon: House,
       title: 'Boende',
       content: [
         'Vi rekommenderar övernattning i Grisslehamn och bussar kommer att finnas tillgängligt för att ta er till Folk & Fä och tillbaka så ni slipper ta egen bil.',
