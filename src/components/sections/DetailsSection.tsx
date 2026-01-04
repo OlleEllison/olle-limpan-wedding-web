@@ -19,7 +19,7 @@ export const DetailsSection: React.FC = () => {
     {
       id: 'schedule',
       icon: Clock,
-      title: 'Tidschema',
+      title: 'Tidsschema',
       content: [
         'Lördag:',
         '14:30 - Buss från Grisslehamn Havsbad',
@@ -30,7 +30,10 @@ export const DetailsSection: React.FC = () => {
         '02:00 - Sista buss till Grisslehamn',
         '',
         'Söndag:',
-        'Frivillig gemensam brunch på XXX'
+        '12:00 - Frivillig gemensam brunch på'
+      ],
+      links: [
+        { name: 'Bonden & Burgaren', url: 'https://vaddogardsmejeri.se/' }
       ]
     },
     {
@@ -41,6 +44,9 @@ export const DetailsSection: React.FC = () => {
         'Folk & Fä',
         'Gamla Landsvägen 57',
         '764 56 Grisslehamn'
+      ],
+      links: [
+        { name: 'Visa på karta', url: 'https://www.google.com/maps/place//data=!4m2!3m1!1s0x46600685032cfe8d:0x6dd98f0e4929635?sa=X&ved=1t:8290&ictx=111' }
       ]
     },
     {
@@ -82,7 +88,7 @@ export const DetailsSection: React.FC = () => {
       icon: Gift,
       title: 'Bröllopsgåva',
       content: [
-        'Er närvaro är det enda vi önskar! Om ni ändå vill bidra med något kan ni swisha vår Best Person XXX på XXX för bidrag till vår smekmånad.'
+        'Er närvaro är det enda vi önskar! Om ni ändå vill bidra med något kan ni swisha vår Best Person Amanda Wallskog på 070-690 07 52 för bidrag till vår smekmånad.'
       ]
     }
   ];

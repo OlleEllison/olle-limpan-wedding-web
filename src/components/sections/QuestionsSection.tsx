@@ -1,51 +1,52 @@
 import React from 'react';
-import { Mail } from 'lucide-react';
-import { Card, CardContent } from '@/components/ui/card';
-import { AspectRatio } from '@/components/ui/aspect-ratio';
-import coupleCollage from '@/assets/couple-collage.png';
+import { MicVocal, MessageCircleQuestion } from 'lucide-react';
 
 export const QuestionsSection: React.FC = () => {
   return (
-    <section className="py-10 bg-transparent">
+    <section id="questions" className="py-10 bg-transparent">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto space-y-6">
-          {/* Questions Header */}
-          <div className="text-center space-y-4">
-            <h2 className="font-lemon-milk font-normal text-[18px] md:text-[20px] text-primary">
-              Frågor
-            </h2>
-            <div className="flex items-center justify-center gap-3 text-[10px] md:text-[12px] text-muted-foreground">
-              <Mail className="text-primary" size={16} />
-              <p>
-                Har du frågor? Kontakta oss på{' '}
-                <a 
-                  href="mailto:xxx.xxx@ellisonsvalberg.com" 
-                  className="text-primary hover:underline font-medium"
-                >
-                  xxx.xxx@ellisonsvalberg.com
-                </a>
-              </p>
+        <div className="max-w-4xl mx-auto space-y-8">
+          {/* Tal Section */}
+          <div className="text-center space-y-4 py-4 border-b border-border">
+            <div className="flex justify-center mb-4">
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center">
+                <MicVocal className="text-primary" size={24} />
+              </div>
             </div>
-          </div>
-
-          {/* Vi ses snart text */}
-          <div className="text-center">
-            <p className="font-lemon-milk font-normal text-[18px] md:text-[20px] text-primary">
-              Vi ses snart!
+            <h2 className="font-lemon-milk font-normal text-[14px] md:text-[16px] text-black">
+              Tal
+            </h2>
+            <p className="text-[10px] md:text-[12px] text-muted-foreground">
+              Kontakta oss på{' '}
+              <a 
+                href="mailto:toastmaster@ellisonsvalberg.com" 
+                className="text-primary hover:underline font-medium"
+              >
+                toastmaster@ellisonsvalberg.com
+              </a>
             </p>
           </div>
 
-          {/* Image Collage */}
-          <div className="space-y-6">
-            <Card className="shadow-lg border border-border/50">
-              <CardContent className="p-8">
-                <img 
-                  src={coupleCollage} 
-                  alt="Foto collage av brudparet" 
-                  className="w-full h-auto rounded-lg"
-                />
-              </CardContent>
-            </Card>
+          {/* Frågor Section */}
+          <div className="text-center space-y-4 py-4 border-b border-border">
+            <div className="flex justify-center mb-4">
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center">
+                <MessageCircleQuestion className="text-primary" size={24} />
+              </div>
+            </div>
+            <h2 className="font-lemon-milk font-normal text-[14px] md:text-[16px] text-black">
+              Frågor
+            </h2>
+            <p className="text-[10px] md:text-[12px] text-muted-foreground">
+              Har du frågor? Hör av dig till oss direkt!
+            </p>
+          </div>
+
+          {/* Vi ses snart text */}
+          <div className="text-center pt-4">
+            <p className="font-lemon-milk font-normal text-[18px] md:text-[20px] text-primary">
+              Vi ses snart!
+            </p>
           </div>
         </div>
       </div>
