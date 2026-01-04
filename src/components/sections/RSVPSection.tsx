@@ -1,6 +1,6 @@
 import React from 'react';
-import { Heart } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { BookCheck } from 'lucide-react';
+import { Card, CardContent, CardHeader } from '@/components/ui/card';
 
 export const RSVPSection: React.FC = () => {
   return (
@@ -9,20 +9,22 @@ export const RSVPSection: React.FC = () => {
         <div className="max-w-4xl mx-auto space-y-6">
           {/* Section Header */}
           <div className="text-center space-y-4">
+            <div className="flex justify-center mb-4">
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center">
+                <BookCheck className="text-primary" size={24} />
+              </div>
+            </div>
             <h2 className="font-lemon-milk font-normal text-[18px] md:text-[20px] text-primary">
               OSA
             </h2>
             <p className="text-[10px] md:text-[12px] text-muted-foreground">
-              Svara senast 1 juni 2026
+              Svara senast <span className="font-bold">31 maj 2026</span> genom att fylla i formuläret nedan.
             </p>
           </div>
 
           {/* Google Form */}
           <Card className="shadow-xl border-2 border-primary/20 bg-transparent backdrop-blur-sm">
             <CardHeader className="text-center">
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Heart className="text-primary" size={24} />
-              </div>
             </CardHeader>
             <CardContent className="p-0">
               <div className="w-full overflow-hidden rounded-b-lg">
