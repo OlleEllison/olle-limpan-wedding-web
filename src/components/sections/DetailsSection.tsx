@@ -77,18 +77,19 @@ export const DetailsSection: React.FC = () => {
       icon: AlertTriangle,
       title: 'Viktigt att komma ihåg',
       content: [
-        'Buss till och från Grisslehamn kommer att finnas',
+        'För er som bor i Grisslehamn kommer vi anordna busstransfer till och från Folk och Fä',
         'Parkering finns på plats',
-        'Möjlighet för kvällsbad kommer att finnas',
+        'Möjlighet för kvällsbad och bastu kommer att finnas',
         'Frågor, hör av dig!'
       ]
     },
     {
       id: 'gifts',
       icon: Gift,
-      title: 'Bröllopsgåva',
+      title: 'Bröllopsgåvor',
       content: [
-        'Er närvaro är det enda vi önskar! Om ni ändå vill bidra med något kan ni swisha vår Best Person Amanda Wallskog på 070-690 07 52 för bidrag till vår smekmånad.'
+        'Er närvaro är det enda vi önskar!',
+        'Om ni ändå vill bidra med något kan ni swisha vår Best Person Amanda Wallskog på 070-690 07 52 för bidrag till vår smekmånad.'
       ]
     }
   ];
