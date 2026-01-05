@@ -7,7 +7,7 @@ export const QuestionsSection: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           {/* Tal Section */}
-          <div id="tal" className="text-center space-y-4 py-4 border-b border-border">
+          <div id="tal" className="text-center space-y-4 pt-0 pb-4 border-b border-border">
             <div className="flex justify-center mb-4">
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center">
                 <MicVocal className="text-primary" size={24} />
@@ -28,7 +28,7 @@ export const QuestionsSection: React.FC = () => {
           </div>
 
           {/* Frågor Section */}
-          <div className="text-center space-y-4 py-4 border-b border-border">
+          <div className="mt-6 text-center space-y-4 py-4 border-b border-border">
             <div className="flex justify-center mb-4">
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center">
                 <MessageCircleQuestion className="text-primary" size={24} />
