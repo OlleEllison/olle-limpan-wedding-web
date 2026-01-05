@@ -81,19 +81,63 @@ export const DetailsSection: React.FC = () => {
         'Er närvaro är det enda vi önskar!',
         'Om ni ändå vill bidra med något kan ni swisha vår Best Person Amanda Wallskog på 070-690 07 52 för bidrag till vår smekmånad.'
       ]
-    },
-    {
-      id: 'important',
-      icon: AlertTriangle,
-      title: 'Övrig info',
-      content: [
-        'För er som bor i Grisslehamn kommer vi anordna busstransfer till och från Folk och Fä',
-        'Parkering finns på plats',
-        'Möjlighet för kvällsbad och bastu kommer att finnas',
-        'Frågor, hör av dig direkt till oss!'
-      ]
     }
   ];
+
+  const importantInfo: Detail = {
+    id: 'important',
+    icon: AlertTriangle,
+    title: 'Övrig info',
+    content: [
+      'För er som bor i Grisslehamn kommer vi anordna busstransfer till och från Folk och Fä',
+      'Parkering finns på plats',
+      'Möjlighet för kvällsbad och bastu kommer att finnas',
+      'Frågor, hör av dig direkt till oss!'
+    ]
+  };
+
+  const renderDetail = (detail: Detail, index: number) => (
+    <div 
+      key={index}
+      id={detail.id}
+      className="text-center space-y-4 py-4 border-b border-border"
+    >
+      <div className="flex justify-center mb-4">
+        <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center">
+          <detail.icon className="text-primary" size={24} />
+        </div>
+      </div>
+      <h3 className="font-lemon-milk font-normal text-[14px] md:text-[16px] text-black">
+        {detail.title}
+      </h3>
+      <div className="space-y-2">
+        {detail.content.map((item, itemIndex) => (
+          <p 
+            key={itemIndex} 
+            className={`${item === '' ? 'h-2' : 'text-[10px] md:text-[12px] text-muted-foreground'}`}
+          >
+            {item}
+          </p>
+        ))}
+        {detail.links && detail.links.length > 0 && (
+          <div className="space-y-1">
+            {detail.links.map((link, linkIndex) => (
+              <p key={linkIndex} className="text-[10px] md:text-[12px] text-muted-foreground">
+                <a 
+                  href={link.url} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-primary hover:underline"
+                >
+                  {link.name}
+                </a>
+              </p>
+            ))}
+          </div>
+        )}
+      </div>
+    </div>
+  );
 
   return (
     <section id="details" className="py-10 bg-transparent">
@@ -108,48 +152,42 @@ export const DetailsSection: React.FC = () => {
 
           {/* Details Sections */}
           <div className="space-y-6">
-            {details.map((detail, index) => (
-              <div 
-                key={index}
-                id={detail.id}
-                className="text-center space-y-4 py-4 border-b border-border"
-              >
-                <div className="flex justify-center mb-4">
-                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center">
-                    <detail.icon className="text-primary" size={24} />
-                  </div>
-                </div>
-                <h3 className="font-lemon-milk font-normal text-[14px] md:text-[16px] text-black">
-                  {detail.title}
-                </h3>
-                <div className="space-y-2">
-                  {detail.content.map((item, itemIndex) => (
-                    <p 
-                      key={itemIndex} 
-                      className={`${item === '' ? 'h-2' : 'text-[10px] md:text-[12px] text-muted-foreground'}`}
-                    >
-                      {item}
-                    </p>
-                  ))}
-                  {detail.links && detail.links.length > 0 && (
-                    <div className="space-y-1">
-                      {detail.links.map((link, linkIndex) => (
-                        <p key={linkIndex} className="text-[10px] md:text-[12px] text-muted-foreground">
-                          <a 
-                            href={link.url} 
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            className="text-primary hover:underline"
-                          >
-                            {link.name}
-                          </a>
-                        </p>
-                      ))}
-                    </div>
-                  )}
-                </div>
+            {details.map((detail, index) => renderDetail(detail, index))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export const ImportantInfoSection: React.FC = () => {
+  return (
+    <section id="important" className="bg-transparent">
+      <div className="container mx-auto px-4">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center space-y-4 py-4 border-b border-border">
+            <div className="flex justify-center mb-4">
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center">
+                <AlertTriangle className="text-primary" size={24} />
               </div>
-            ))}
+            </div>
+            <h3 className="font-lemon-milk font-normal text-[14px] md:text-[16px] text-black">
+              Övrig info
+            </h3>
+            <div className="space-y-2">
+              <p className="text-[10px] md:text-[12px] text-muted-foreground">
+                För er som bor i Grisslehamn kommer vi anordna busstransfer till och från Folk och Fä
+              </p>
+              <p className="text-[10px] md:text-[12px] text-muted-foreground">
+                Parkering finns på plats
+              </p>
+              <p className="text-[10px] md:text-[12px] text-muted-foreground">
+                Möjlighet för kvällsbad och bastu kommer att finnas
+              </p>
+              <p className="text-[10px] md:text-[12px] text-muted-foreground">
+                Frågor, hör av dig direkt till oss!
+              </p>
+            </div>
           </div>
         </div>
       </div>
