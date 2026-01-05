@@ -40,7 +40,7 @@ export const RSVPSection: React.FC = () => {
           </Card>
 
           {/* Vi ses snart text */}
-          <div className="text-center pt-8">
+          <div className="text-center pt-8 pb-16">
             <p className="font-lemon-milk font-normal text-[18px] md:text-[20px] text-primary">
               Vi ses snart!
             </p>
