@@ -40,20 +40,20 @@ export const Navigation: React.FC<NavigationProps> = ({ activeSection, onSection
       {/* Fixed Navigation Header */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
         <div className="w-full px-4 h-16 flex items-center justify-between">
-          {/* Menu Button - Left edge */}
+          {/* Logo - Left edge */}
+          <div className="flex items-center">
+            <WeddingRings size={48} />
+          </div>
+
+          {/* Menu Button - Right edge */}
           <Button
             variant="ghost"
             size="icon"
             onClick={() => setIsOpen(!isOpen)}
             className="p-2"
           >
-            {isOpen ? <X size={28} /> : <Menu size={28} />}
+            {isOpen ? <X size={32} /> : <Menu size={32} />}
           </Button>
-
-          {/* Logo - Right edge */}
-          <div className="flex items-center">
-            <WeddingRings size={40} />
-          </div>
         </div>
       </nav>
 
