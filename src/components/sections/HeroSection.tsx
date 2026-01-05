@@ -73,7 +73,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onRSVPClick }) => {
           </div>
 
           {/* Desktop-only spacer */}
-          <div className="hidden md:block h-8"></div>
+          <div className="hidden md:block h-4"></div>
 
           {/* Couple Image Gallery with Speech Bubbles */}
           <div className="relative flex justify-center items-center mt-8 md:mt-16 mb-12">
