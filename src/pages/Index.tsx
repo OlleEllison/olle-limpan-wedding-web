@@ -3,7 +3,7 @@ import { Navigation } from '@/components/Navigation';
 import { HeroSection } from '@/components/sections/HeroSection';
 import { DetailsSection } from '@/components/sections/DetailsSection';
 import { RSVPSection } from '@/components/sections/RSVPSection';
-import { QuestionsSection } from '@/components/sections/QuestionsSection';
+
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState('home');
@@ -44,7 +44,7 @@ const Index = () => {
       <main className="pt-16 relative z-10" style={{ transform: 'translateZ(0)' }}>
         <HeroSection onRSVPClick={handleRSVPClick} />
         <DetailsSection />
-        <QuestionsSection />
+        
         <RSVPSection />
       </main>
     </div>
