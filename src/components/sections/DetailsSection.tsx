@@ -110,7 +110,7 @@ export const DetailsSection: React.FC = () => {
               <div 
                 key={index}
                 id={detail.id}
-                className="text-center space-y-4 py-4 border-b border-border last:border-b-0"
+                className="text-center space-y-4 py-4 border-b border-border"
               >
                 <div className="flex justify-center mb-4">
                   <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center">
