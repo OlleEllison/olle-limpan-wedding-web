@@ -42,7 +42,7 @@ All colors MUST be HSL.
 @layer base {
   :root {
     /* Green Color Scheme - Based on Flower Stems */
-    --background: 40 33% 96%;
+    --background: 60 20% 98%;
     --foreground: 95 40% 38%;
 
     --card: 60 15% 99%;
@@ -160,7 +160,7 @@ All colors MUST be HSL.
     background-repeat: no-repeat;
     z-index: -1;
     opacity: 0.85;
-    filter: sepia(15%) saturate(80%) hue-rotate(70deg) brightness(1.1);
+    filter: sepia(20%) saturate(150%) hue-rotate(60deg) brightness(1.05);
   }
   
   /* Parallax wrapper */
