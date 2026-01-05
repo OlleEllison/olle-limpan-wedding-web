@@ -54,8 +54,8 @@ export const DetailsSection: React.FC = () => {
       icon: House,
       title: 'Boende',
       content: [
-        'Vi rekommenderar övernattning i Grisslehamn.',
-        'Busstransfer kommer att finnas tillgängligt från Grisslehamn till Folk & Fä och tillbaka så ni slipper ta egen bil till festen.',
+        'Vi rekommenderar övernattning i Grisslehamn',
+        'Busstransfer kommer att finnas tillgängligt från Grisslehamn till Folk & Fä och tillbaka så ni slipper ta egen bil till festen',
         '',
         'Rekommenderade boenden i Grisslehamn:'
       ],
@@ -79,7 +79,7 @@ export const DetailsSection: React.FC = () => {
       title: 'Bröllopsgåvor',
       content: [
         'Er närvaro är det enda vi önskar!',
-        'Om ni ändå vill bidra med något kan ni swisha vår Best Person Amanda Wallskog på 070-690 07 52 för bidrag till vår smekmånad.'
+        'Om ni ändå vill bidra med något kan ni swisha vår Best Person Amanda Wallskog på 070-690 07 52 för bidrag till vår smekmånad'
       ]
     }
   ];
