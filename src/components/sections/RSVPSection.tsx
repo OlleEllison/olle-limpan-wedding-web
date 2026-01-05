@@ -18,7 +18,7 @@ export const RSVPSection: React.FC = () => {
               OSA
             </h3>
             <p className="text-[10px] md:text-[12px] text-muted-foreground">
-              Svara senast <span className="font-bold">31 maj 2026</span> genom att fylla i formuläret nedan.
+              Svara senast <span className="font-bold">31 maj 2026</span> genom att fylla i formuläret nedan
             </p>
           </div>
 
