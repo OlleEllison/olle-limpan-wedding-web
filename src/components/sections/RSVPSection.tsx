@@ -4,7 +4,7 @@ import { Card, CardContent, CardHeader } from '@/components/ui/card';
 
 export const RSVPSection: React.FC = () => {
   return (
-    <section id="rsvp" className="bg-transparent">
+    <section id="rsvp" className="mt-6 bg-transparent">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto space-y-6">
           {/* Section Header */}
