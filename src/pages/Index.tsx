@@ -44,8 +44,8 @@ const Index = () => {
       <main className="pt-16 relative z-10" style={{ transform: 'translateZ(0)' }}>
         <HeroSection onRSVPClick={handleRSVPClick} />
         <DetailsSection />
-        <RSVPSection />
         <QuestionsSection />
+        <RSVPSection />
       </main>
     </div>
   );
