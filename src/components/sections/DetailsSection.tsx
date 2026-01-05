@@ -90,7 +90,7 @@ export const DetailsSection: React.FC = () => {
         'För er som bor i Grisslehamn kommer vi anordna busstransfer till och från Folk och Fä',
         'Parkering finns på plats',
         'Möjlighet för kvällsbad och bastu kommer att finnas',
-        'Frågor, hör av dig direkt till oss!'
+        'Frågor, hör av dig!'
       ]
     }
   ];

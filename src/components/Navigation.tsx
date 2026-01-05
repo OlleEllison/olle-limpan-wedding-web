@@ -20,6 +20,7 @@ export const Navigation: React.FC<NavigationProps> = ({ activeSection, onSection
     { id: 'gifts', label: 'Gåva', icon: Heart },
     { id: 'tal', label: 'Tal', icon: Heart },
     { id: 'important', label: 'Övrig info', icon: Heart },
+    { id: 'questions', label: 'Frågor', icon: Heart },
     { id: 'rsvp', label: 'OSA', icon: Heart },
   ];
 
