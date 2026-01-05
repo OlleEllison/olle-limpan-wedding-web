@@ -30,7 +30,7 @@ export const DetailsSection: React.FC = () => {
         '02:00 - Sista buss till Grisslehamn',
         '',
         'Söndag:',
-        '12:00 - Frivillig gemensam brunch på'
+        '12:00 - Frivillig gemensam lunch på'
       ],
       links: [
         { name: 'Bonden & Burgaren', url: 'https://vaddogardsmejeri.se/' }
@@ -54,7 +54,8 @@ export const DetailsSection: React.FC = () => {
       icon: House,
       title: 'Boende',
       content: [
-        'Vi rekommenderar övernattning i Grisslehamn och bussar kommer att finnas tillgängligt för att ta er till Folk & Fä och tillbaka så ni slipper ta egen bil.',
+        'Vi rekommenderar övernattning i Grisslehamn.',
+        'Busstransfer kommer att finnas tillgängligt från Grisslehamn till Folk & Fä och tillbaka så ni slipper ta egen bil till festen.',
         '',
         'Rekommenderade boenden i Grisslehamn:'
       ],
@@ -73,23 +74,23 @@ export const DetailsSection: React.FC = () => {
       ]
     },
     {
-      id: 'important',
-      icon: AlertTriangle,
-      title: 'Viktigt att komma ihåg',
-      content: [
-        'För er som bor i Grisslehamn kommer vi anordna busstransfer till och från Folk och Fä',
-        'Parkering finns på plats',
-        'Möjlighet för kvällsbad och bastu kommer att finnas',
-        'Frågor, hör av dig!'
-      ]
-    },
-    {
       id: 'gifts',
       icon: Gift,
       title: 'Bröllopsgåvor',
       content: [
         'Er närvaro är det enda vi önskar!',
         'Om ni ändå vill bidra med något kan ni swisha vår Best Person Amanda Wallskog på 070-690 07 52 för bidrag till vår smekmånad.'
+      ]
+    },
+    {
+      id: 'important',
+      icon: AlertTriangle,
+      title: 'Övrig info',
+      content: [
+        'För er som bor i Grisslehamn kommer vi anordna busstransfer till och från Folk och Fä',
+        'Parkering finns på plats',
+        'Möjlighet för kvällsbad och bastu kommer att finnas',
+        'Frågor, hör av dig!'
       ]
     }
   ];

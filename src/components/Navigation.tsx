@@ -17,9 +17,9 @@ export const Navigation: React.FC<NavigationProps> = ({ activeSection, onSection
     { id: 'location', label: 'Plats', icon: Heart },
     { id: 'accommodation', label: 'Boende', icon: Heart },
     { id: 'dresscode', label: 'Klädkod', icon: Heart },
-    { id: 'important', label: 'Viktig info', icon: Heart },
     { id: 'gifts', label: 'Gåva', icon: Heart },
     { id: 'tal', label: 'Tal', icon: Heart },
+    { id: 'important', label: 'Övrig info', icon: Heart },
     { id: 'questions', label: 'Frågor', icon: Heart },
     { id: 'rsvp', label: 'OSA', icon: Heart },
   ];
