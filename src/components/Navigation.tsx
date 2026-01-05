@@ -39,20 +39,21 @@ export const Navigation: React.FC<NavigationProps> = ({ activeSection, onSection
     <>
       {/* Fixed Navigation Header */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
-        <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
-          {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <WeddingRings size={32} />
-          </div>
-
-          {/* Menu Button - Always visible */}
+        <div className="w-full px-4 h-16 flex items-center justify-between">
+          {/* Menu Button - Left edge */}
           <Button
             variant="ghost"
-            size="sm"
+            size="icon"
             onClick={() => setIsOpen(!isOpen)}
+            className="p-2"
           >
-            {isOpen ? <X size={20} /> : <Menu size={20} />}
+            {isOpen ? <X size={28} /> : <Menu size={28} />}
           </Button>
+
+          {/* Logo - Right edge */}
+          <div className="flex items-center">
+            <WeddingRings size={40} />
+          </div>
         </div>
       </nav>
 
