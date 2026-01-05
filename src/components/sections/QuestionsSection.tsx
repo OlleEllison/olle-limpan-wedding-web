@@ -41,13 +41,6 @@ export const QuestionsSection: React.FC = () => {
               Har du frågor? Hör av dig till oss direkt!
             </p>
           </div>
-
-          {/* Vi ses snart text */}
-          <div className="text-center pt-4">
-            <p className="font-lemon-milk font-normal text-[18px] md:text-[20px] text-primary">
-              Vi ses snart!
-            </p>
-          </div>
         </div>
       </div>
     </section>
