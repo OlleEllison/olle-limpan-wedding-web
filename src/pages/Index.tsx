@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Navigation } from '@/components/Navigation';
 import { HeroSection } from '@/components/sections/HeroSection';
-import { DetailsSection } from '@/components/sections/DetailsSection';
+import { DetailsSection, ImportantInfoSection } from '@/components/sections/DetailsSection';
 import { RSVPSection } from '@/components/sections/RSVPSection';
 import { QuestionsSection } from '@/components/sections/QuestionsSection';
 
@@ -45,6 +45,7 @@ const Index = () => {
         <HeroSection onRSVPClick={handleRSVPClick} />
         <DetailsSection />
         <QuestionsSection />
+        <ImportantInfoSection />
         <RSVPSection />
       </main>
     </div>
