@@ -4,19 +4,19 @@ import { Card, CardContent, CardHeader } from '@/components/ui/card';
 
 export const RSVPSection: React.FC = () => {
   return (
-    <section id="rsvp" className="py-10 bg-transparent">
+    <section id="rsvp" className="bg-transparent">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto space-y-6">
           {/* Section Header */}
-          <div className="text-center space-y-4">
+          <div className="text-center space-y-4 py-4">
             <div className="flex justify-center mb-4">
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center">
                 <BookCheck className="text-primary" size={24} />
               </div>
             </div>
-            <h2 className="font-lemon-milk font-normal text-[18px] md:text-[20px] text-primary">
+            <h3 className="font-lemon-milk font-normal text-[14px] md:text-[16px] text-black">
               OSA
-            </h2>
+            </h3>
             <p className="text-[10px] md:text-[12px] text-muted-foreground">
               Svara senast <span className="font-bold">31 maj 2026</span> genom att fylla i formuläret nedan.
             </p>
