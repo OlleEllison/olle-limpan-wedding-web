@@ -114,7 +114,7 @@ export const DetailsSection: React.FC = () => {
         {detail.content.map((item, itemIndex) => (
           <p 
             key={itemIndex} 
-            className={`${item === '' ? 'h-2' : 'text-[10px] md:text-[12px] text-muted-foreground'}`}
+            className={`${item === '' ? 'h-2' : 'text-[10px] md:text-[12px] text-muted-foreground'} ${item === 'Lördag:' || item === 'Söndag:' ? 'font-bold' : ''}`}
           >
             {item}
           </p>
@@ -176,13 +176,13 @@ export const ImportantInfoSection: React.FC = () => {
             </h3>
             <div className="space-y-2">
               <p className="text-[10px] md:text-[12px] text-muted-foreground">
-                För er som bor i Grisslehamn kommer vi anordna busstransfer till och från Folk och Fä
+                För er som väljer att bo i Grisslehamn kommer vi anordna busstransfer till och från Folk och Fä
               </p>
               <p className="text-[10px] md:text-[12px] text-muted-foreground">
-                Parkering finns på plats
+                För er som bor på annat håll, eller vill ta bil finns parkering på plats
               </p>
               <p className="text-[10px] md:text-[12px] text-muted-foreground">
-                Möjlighet för kvällsbad och bastu kommer att finnas
+                Möjlighet för kvällsbad och bastu kommer att finnas, ta med egen handduk och badkläder om du är sugen
               </p>
               <p className="text-[10px] md:text-[12px] text-muted-foreground">
                 Frågor, hör av dig direkt till oss!

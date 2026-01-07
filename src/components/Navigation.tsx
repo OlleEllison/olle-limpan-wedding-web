@@ -40,9 +40,12 @@ export const Navigation: React.FC<NavigationProps> = ({ activeSection, onSection
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
         <div className="w-full px-4 h-16 flex items-center justify-between">
           {/* Logo - Left edge */}
-          <div className="flex items-center">
+          <button 
+            onClick={() => handleMenuClick('home')}
+            className="flex items-center"
+          >
             <WeddingRings size={48} />
-          </div>
+          </button>
 
           {/* Menu Button - Right edge */}
           <Button
