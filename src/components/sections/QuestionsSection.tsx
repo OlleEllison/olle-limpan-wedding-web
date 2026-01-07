@@ -17,7 +17,7 @@ export const QuestionsSection: React.FC = () => {
               Tal
             </h3>
             <p className="text-[10px] md:text-[12px] text-muted-foreground">
-              Kontakta oss på{' '}
+              Maila våra toastmasters på{' '}
               <a 
                 href="mailto:toastmaster@ellisonsvalberg.com" 
                 className="text-primary hover:underline font-medium"
