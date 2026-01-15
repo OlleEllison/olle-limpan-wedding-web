@@ -189,7 +189,7 @@ All colors MUST be HSL.
   @supports (-webkit-touch-callout: none) {
     body::after {
       mix-blend-mode: normal;
-      filter: sepia(100%) saturate(400%) hue-rotate(60deg) brightness(0.4);
+      filter: sepia(100%) saturate(400%) hue-rotate(60deg) brightness(0.4) opacity(0.15);
     }
   }
   
