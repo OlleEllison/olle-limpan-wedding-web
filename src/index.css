@@ -163,8 +163,8 @@ All colors MUST be HSL.
     background-position: center center;
     background-repeat: no-repeat;
     z-index: -1;
-    opacity: 0.85;
-    filter: sepia(20%) saturate(150%) hue-rotate(60deg) brightness(1.05);
+    opacity: 0.95;
+    filter: sepia(15%) saturate(180%) hue-rotate(55deg) brightness(0.95) contrast(1.1);
     will-change: transform, opacity;
     backface-visibility: hidden;
     -webkit-transform: translateZ(0);
