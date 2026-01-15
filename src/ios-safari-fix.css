@@ -9,17 +9,16 @@
 
 /* Cache-bust just in case iOS is holding onto a bad raster */
 :root {
-  --bg-pattern-url: url('/background-pattern.png?v=2');
+  --bg-pattern-url: url('/background-pattern.png?v=3');
 }
 
 @supports (-webkit-touch-callout: none) {
   body {
+    background-color: hsl(60 20% 97%);
     background-image: var(--bg-pattern-url);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    /* Sharper, darker green for iOS (no filter support in this context) */
-    filter: brightness(0.95) contrast(1.1);
   }
 
   body::before {
