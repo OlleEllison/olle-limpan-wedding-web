@@ -108,6 +108,15 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onRSVPClick }) => {
                 <div className="absolute bottom-[-10px] left-6 w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-t-[10px] border-t-primary"></div>
               </div>
             </div>
+
+            {/* Third Speech Bubble - TEST */}
+            <div className={`absolute z-10 transform rotate-6 ${isMobile ? 'left-1/2 -translate-x-1/2 -bottom-16 scale-100' : 'left-1/2 -translate-x-1/2 -bottom-20 scale-150'}`}>
+              <div className="bg-white border-2 border-primary rounded-lg px-6 py-3 relative shadow-lg">
+                <p className="font-lemon-milk italic font-light text-[8px] text-primary whitespace-nowrap">Test bubble!</p>
+                <div className="absolute top-[-8px] left-1/2 -translate-x-1/2 w-0 h-0 border-l-[8px] border-l-transparent border-r-[8px] border-r-transparent border-b-[8px] border-b-white"></div>
+                <div className="absolute top-[-10px] left-1/2 -translate-x-1/2 w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-b-[10px] border-b-primary"></div>
+              </div>
+            </div>
           </div>
 
           {/* Wedding Date */}
