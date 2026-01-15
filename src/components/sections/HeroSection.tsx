@@ -19,11 +19,23 @@ import gallery10 from '@/assets/gallery/gallery-10.jpeg';
 import gallery11 from '@/assets/gallery/gallery-11.jpeg';
 import gallery12 from '@/assets/gallery/gallery-12.jpeg';
 
-const galleryImages = [
+const galleryImagesOriginal = [
   gallery1, gallery2, gallery3, gallery4, gallery5,
   gallery6, gallery7, gallery8, gallery9, gallery10,
   gallery11, gallery12
 ];
+
+// Shuffle array using Fisher-Yates algorithm
+const shuffleArray = <T,>(array: T[]): T[] => {
+  const shuffled = [...array];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+};
+
+const galleryImages = shuffleArray(galleryImagesOriginal);
 
 interface HeroSectionProps {
   onRSVPClick: () => void;
