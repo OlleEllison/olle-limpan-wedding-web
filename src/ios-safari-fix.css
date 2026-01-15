@@ -1,0 +1,26 @@
+/*
+  iOS Safari fix:
+  Some iPhone Safari versions intermittently rasterize fixed pseudo-element layers
+  (especially with compositing/filter/opacity) as a solid color during refresh.
+
+  We avoid the pseudo-element technique on iOS and instead apply the background
+  directly to <body>, which is more stable.
+*/
+
+/* Cache-bust just in case iOS is holding onto a bad raster */
+:root {
+  --bg-pattern-url: url('/background-pattern.png?v=2');
+}
+
+@supports (-webkit-touch-callout: none) {
+  body {
+    background-image: var(--bg-pattern-url);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
+  body::before {
+    display: none !important;
+  }
+}
