@@ -35,8 +35,8 @@
     background-position: center center;
     background-repeat: no-repeat;
     z-index: -1;
-    /* Same vivid green tint and 15% line opacity as desktop */
-    filter: brightness(0) saturate(100%) invert(35%) sepia(50%) saturate(800%) hue-rotate(80deg) brightness(1.1) opacity(0.15);
+    /* Same natural forest green as desktop */
+    filter: brightness(0) saturate(100%) invert(32%) sepia(15%) saturate(1000%) hue-rotate(85deg) brightness(0.85) opacity(0.25);
     pointer-events: none;
   }
 }
