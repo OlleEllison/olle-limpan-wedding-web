@@ -4,16 +4,35 @@ PRODID:-//Wedding//Save the Date//EN
 BEGIN:VEVENT
 UID:wedding-ellison-olle-20260815@example.com
 DTSTART:20260815T150000Z
-DTEND:20260815T230000Z
-SUMMARY:Ellison & Olles Bröllop
-DESCRIPTION:Kom och fira oss! Mer information kommer senare.
-LOCATION:Vaddo
+DTEND:20260815T235900Z
+SUMMARY:Bröllop Olle & Linn Bröllop 2026!
+DESCRIPTION:
+Kom och fira oss!
+
+Bröllopsdetaljer
+Tidsschema
+Lördag:
+
+14:30 - Buss från Grisslehamn Havsbad
+
+15:00 - Vigsel
+
+16:00 - Mingel
+
+18:00 - Middag
+
+22:00 - Första buss till Grisslehamn
+
+02:00 - Sista buss till Grisslehamn
+
+
+LOCATION:Folk & Fä, Väddö
 STATUS:CONFIRMED
 SEQUENCE:0
 BEGIN:VALARM
 TRIGGER:-P1D
 ACTION:DISPLAY
-DESCRIPTION:Reminder: Ellison & Olles Bröllop tomorrow!
+DESCRIPTION:Reminder: Olle & Linns bröllop imorgon!
 END:VALARM
 END:VEVENT
 END:VCALENDAR
