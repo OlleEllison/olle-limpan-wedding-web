@@ -6,27 +6,10 @@ UID:wedding-ellison-olle-20260815@example.com
 DTSTART:20260815T150000Z
 DTEND:20260815T235900Z
 SUMMARY:Bröllop Olle & Linn Bröllop 2026!
-DESCRIPTION:
-Kom och fira oss!
-
-Bröllopsdetaljer
-Tidsschema
-Lördag:
-
-14:30 - Buss från Grisslehamn Havsbad
-
-15:00 - Vigsel
-
-16:00 - Mingel
-
-18:00 - Middag
-
-22:00 - Första buss till Grisslehamn
-
-02:00 - Sista buss till Grisslehamn
-
-
-LOCATION:Folk & Fä, Väddö
+DESCRIPTION:Kom och fira oss!\n\nBröllopsdetaljer\nTidsschema\nLördag:\n\n14:30 - Buss från Grisslehamn Havsbad\n15:00 - Vigsel\n16:00 - Mingel\n18:00 - Middag\n22:00 - Första buss till Grisslehamn\n02:00 - Sista buss till Grisslehamn
+LOCATION:Folk & Fä\, Väddö
+GEO:60.1007;18.8149
+URL:https://www.google.com/maps/place//data=!4m2!3m1!1s0x46600685032cfe8d:0x6dd98f0e4929635?sa=X&ved=1t:8290&ictx=111
 STATUS:CONFIRMED
 SEQUENCE:0
 BEGIN:VALARM

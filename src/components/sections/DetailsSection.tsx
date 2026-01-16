@@ -60,7 +60,7 @@ export const DetailsSection: React.FC = () => {
         'Rekommenderade boenden i Grisslehamn:'
       ],
       links: [
-        { name: 'Grisslehamns Havsbad', url: 'https://www.hotellhavsbaden.se/' },
+        { name: 'Hotell Havsbaden Grisslehamn', url: 'https://www.hotellhavsbaden.se/' },
         { name: 'Grisslehamns Gård', url: 'https://www.pensionatgrisslehamn.se/' },
         { name: 'Pensionat Solgården', url: 'https://www.pensionat-solgarden.se/' }
       ]
@@ -176,7 +176,7 @@ export const ImportantInfoSection: React.FC = () => {
             </h3>
             <div className="space-y-2">
               <p className="text-[10px] md:text-[12px] text-muted-foreground">
-                För er som väljer att bo i Grisslehamn kommer vi anordna busstransfer till och från Folk och Fä
+                För er som väljer att bo i Grisslehamn kommer vi anordna busstransfer från Hotell Grisslehamns havsbad till och från bröllopslokalen
               </p>
               <p className="text-[10px] md:text-[12px] text-muted-foreground">
                 För er som bor på annat håll, eller vill ta bil finns parkering på plats
