@@ -9,7 +9,7 @@
 
 /* Cache-bust just in case iOS is holding onto a bad raster */
 :root {
-  --bg-pattern-url: url('/background-pattern-green.png?v=1');
+  --bg-pattern-url: url('/background-pattern-green.png?v=2');
 }
 
 @supports (-webkit-touch-callout: none) {
