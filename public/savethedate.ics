@@ -5,12 +5,12 @@ BEGIN:VEVENT
 UID:wedding-olle-linn-20260815@example.com
 DTSTART:20260815T130000Z
 DTEND:20260816T000000Z
-SUMMARY:Bröllop Olle & Linn 2026!
-DESCRIPTION:Kom och fira oss!\n\nTidsschema\n14:30 - Buss från Grisslehamn Havsbad\n15:00 - Vigsel\n16:00 - Mingel\n18:00 - Middag\n22:00 - Första buss till Grisslehamn\n02:00 - Sista buss till Grisslehamn
+SUMMARY:Bröllop - Olle & Linn!
+DESCRIPTION:Ungefärliga hålltider\n\nTidsschema\n14:30 - Buss från Grisslehamn Havsbad\n15:00 - Vigsel\n16:00 - Mingel\n18:00 - Middag\n22:00 - Första buss till Grisslehamn\n02:00 - Sista buss till Grisslehamn\n\nVi ser fram emot att fira med er
 LOCATION;ALTREP="https://www.google.com/maps/place//data=!4m2!3m1!1s0x46600685032cfe8d:0x6dd98f0e4929635?sa=X&ved=1t:8290&ictx=111":Folk & Fä\, Väddö
 URL:https://www.google.com/maps/place//data=!4m2!3m1!1s0x46600685032cfe8d:0x6dd98f0e4929635?sa=X&ved=1t:8290&ictx=111
 STATUS:CONFIRMED
-SEQUENCE:1
+SEQUENCE:2
 BEGIN:VALARM
 TRIGGER:-P1D
 ACTION:DISPLAY
