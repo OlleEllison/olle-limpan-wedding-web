@@ -55,7 +55,7 @@ export const DetailsSection: React.FC = () => {
       title: 'Boende',
       content: [
         'Vi rekommenderar övernattning i Grisslehamn',
-        'Busstransfer kommer att finnas tillgängligt från Grisslehamn till Folk & Fä och tillbaka så ni slipper ta egen bil till festen',
+        'Busstransfer kommer att finnas tillgängligt från Hotell Grisslehamns havsbad till och från bröllopslokalen så ni slipper ta egen bil till festen',
         '',
         'Rekommenderade boenden i Grisslehamn:'
       ],
@@ -89,7 +89,7 @@ export const DetailsSection: React.FC = () => {
     icon: AlertTriangle,
     title: 'Övrig info',
     content: [
-      'För er som bor i Grisslehamn kommer vi anordna busstransfer till och från Folk och Fä',
+      'För er som väljer att bo i Grisslehamn kommer vi anordna busstransfer från Hotell Grisslehamns havsbad till och från bröllopslokalen',
       'Parkering finns på plats',
       'Möjlighet för kvällsbad och bastu kommer att finnas',
       'Frågor, hör av dig direkt till oss!'

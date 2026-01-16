@@ -138,7 +138,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onRSVPClick }) => {
                 onClick={() => {
                   const link = document.createElement('a');
                   // Cache-bust so browsers don't keep an older .ics file
-                  link.href = '/savethedate.ics?v=20260116';
+                  link.href = `/savethedate.ics?ts=${Date.now()}`;
                   link.download = 'savethedate.ics';
                   document.body.appendChild(link);
                   link.click();
