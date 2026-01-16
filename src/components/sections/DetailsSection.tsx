@@ -60,7 +60,7 @@ export const DetailsSection: React.FC = () => {
         'Rekommenderade boenden i Grisslehamn:'
       ],
       links: [
-        { name: 'Hotell Havsbaden Grissleman', url: 'https://www.hotellhavsbaden.se/' },
+        { name: 'Hotell Havsbaden Grisslehamn', url: 'https://www.hotellhavsbaden.se/' },
         { name: 'Grisslehamns Gård', url: 'https://www.pensionatgrisslehamn.se/' },
         { name: 'Pensionat Solgården', url: 'https://www.pensionat-solgarden.se/' }
       ]
