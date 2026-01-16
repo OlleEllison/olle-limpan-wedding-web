@@ -9,7 +9,7 @@
 
 /* Cache-bust just in case iOS is holding onto a bad raster */
 :root {
-  --bg-pattern-url: url('/background-pattern.png?v=3');
+  --bg-pattern-url: url('/background-pattern-green.png?v=1');
 }
 
 @supports (-webkit-touch-callout: none) {
@@ -35,8 +35,10 @@
     background-position: center center;
     background-repeat: no-repeat;
     z-index: -1;
-    /* Same natural forest green as desktop */
-    filter: brightness(0) saturate(100%) invert(32%) sepia(15%) saturate(1000%) hue-rotate(85deg) brightness(0.85) opacity(0.25);
+    /* 15% line opacity across all devices */
+    opacity: 0.15;
+    /* Image is already green; no filter needed */
+    filter: none;
     pointer-events: none;
   }
 }
