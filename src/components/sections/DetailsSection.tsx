@@ -55,7 +55,7 @@ export const DetailsSection: React.FC = () => {
       title: 'Boende',
       content: [
         'Vi rekommenderar övernattning i Grisslehamn',
-        'Busstransfer kommer att finnas tillgängligt från Hotell Grisslehamns havsbad till och från bröllopslokalen så ni slipper ta egen bil till festen',
+        'Busstransfer kommer att finnas tillgängligt från Hotell Havsbaden Grisslehamn till och från bröllopslokalen så ni slipper ta egen bil till festen',
         '',
         'Rekommenderade boenden i Grisslehamn:'
       ],
@@ -176,7 +176,7 @@ export const ImportantInfoSection: React.FC = () => {
             </h3>
             <div className="space-y-2">
               <p className="text-[10px] md:text-[12px] text-muted-foreground">
-                För er som väljer att bo i Grisslehamn kommer vi anordna busstransfer från Hotell Grisslehamns havsbad till och från bröllopslokalen
+                För er som väljer att bo i Grisslehamn kommer vi anordna busstransfer från Hotell Havsbaden Grisslehamn till och från bröllopslokalen
               </p>
               <p className="text-[10px] md:text-[12px] text-muted-foreground">
                 För er som bor på annat håll, eller vill ta bil finns parkering på plats
