@@ -138,7 +138,7 @@ export const DetailsSection: React.FC = () => {
           </div>
         )}
         {detail.footnote && (
-          <p className="text-[10px] md:text-[12px] text-muted-foreground mt-4 italic">
+          <p className="text-[10px] md:text-[12px] text-muted-foreground mt-6 italic">
             {detail.footnote}
           </p>
         )}
