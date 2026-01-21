@@ -12,6 +12,7 @@ interface Detail {
   title: string;
   content: string[];
   links?: DetailLink[];
+  footnote?: string;
 }
 
 export const DetailsSection: React.FC = () => {
@@ -60,10 +61,11 @@ export const DetailsSection: React.FC = () => {
         'Rekommenderade boenden i Grisslehamn:'
       ],
       links: [
-        { name: 'Hotell Havsbaden Grisslehamn', url: 'https://www.hotellhavsbaden.se/' },
+        { name: 'Hotell Havsbaden Grisslehamn*', url: 'https://www.hotellhavsbaden.se/' },
         { name: 'Grisslehamns Gård', url: 'https://www.pensionatgrisslehamn.se/' },
         { name: 'Pensionat Solgården', url: 'https://www.pensionat-solgarden.se/' }
-      ]
+      ],
+      footnote: '* Vi har reserverat rum på Hotell Havsbaden Grisslehamn och det finns möjlighet för tidigare incheckning för 100:- / extra timme'
     },
     {
       id: 'dresscode',
@@ -134,6 +136,11 @@ export const DetailsSection: React.FC = () => {
               </p>
             ))}
           </div>
+        )}
+        {detail.footnote && (
+          <p className="text-[10px] md:text-[12px] text-muted-foreground mt-4 italic">
+            {detail.footnote}
+          </p>
         )}
       </div>
     </div>
