@@ -12,7 +12,7 @@ interface Detail {
   title: string;
   content: string[];
   links?: DetailLink[];
-  footnote?: string;
+  footnote?: React.ReactNode;
 }
 
 export const DetailsSection: React.FC = () => {
@@ -65,7 +65,7 @@ export const DetailsSection: React.FC = () => {
         { name: 'Grisslehamns Gård', url: 'https://www.pensionatgrisslehamn.se/' },
         { name: 'Pensionat Solgården', url: 'https://www.pensionat-solgarden.se/' }
       ],
-      footnote: '* Vi har reserverat rum på Hotell Havsbaden Grisslehamn och det finns möjlighet för tidigare incheckning för 100:- / extra timme'
+      footnote: <>* Vi har reserverat rum på Hotell Havsbaden Grisslehamn. Ange koden <strong className="font-bold">810695</strong> vid bokning. I bokningen ingår spa från 12:00 och möjlighet för tidigare incheckning för 100:-/timme</>
     },
     {
       id: 'dresscode',
