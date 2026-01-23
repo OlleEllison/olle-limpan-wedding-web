@@ -141,7 +141,7 @@ export const DetailsSection: React.FC = () => {
           <>
             {/* Match the same spacing pattern as content items with an intentional blank line */}
             <p className="h-2" aria-hidden="true" />
-            <p className="text-[10px] md:text-[12px] text-muted-foreground italic">
+            <p className="text-[8px] md:text-[10px] text-muted-foreground italic">
               {detail.footnote}
             </p>
           </>
