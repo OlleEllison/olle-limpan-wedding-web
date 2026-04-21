@@ -27,7 +27,7 @@ export const DetailsSection: React.FC = () => {
         '16:00 - Vigsel',
         '16:30 - Mingel',
         '18:00 - Middag',
-        '22:00 - Första buss till Grisslehamn',
+        '23:00 - Första buss till Grisslehamn',
         '02:00 - Sista buss till Grisslehamn',
         '',
         'Söndag:',
