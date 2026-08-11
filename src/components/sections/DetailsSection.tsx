@@ -29,10 +29,10 @@ export const DetailsSection: React.FC = () => {
         '18:00 - Middag',
         '23:00 - Första buss till Grisslehamn',
         '02:00 - Sista buss till Grisslehamn',
-        '* Observera att det är ca 5-10 minuters promenad från lokalen till vigselplatsen',
+        '* Observera att det är ca 10 minuters promenad från lokalen till vigselplatsen',
         '',
         'Söndag:',
-        '12:00 - Frivillig gemensam lunch på'
+        '12:30 - Frivillig gemensam lunch på'
       ],
       links: [
         { name: 'Bonden & Burgaren', url: 'https://vaddogardsmejeri.se/' }
