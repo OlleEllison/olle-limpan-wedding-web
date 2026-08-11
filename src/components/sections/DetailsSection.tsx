@@ -24,11 +24,12 @@ export const DetailsSection: React.FC = () => {
       content: [
         'Lördag:',
         '15:30 - Buss från Hotell Havsbaden Grisslehamn',
-        '16:00 - Vigsel',
+        '16:00 - Vigsel*',
         '16:30 - Mingel',
         '18:00 - Middag',
         '23:00 - Första buss till Grisslehamn',
         '02:00 - Sista buss till Grisslehamn',
+        '* Observera att det är ca 5-10 minuters promenad från lokalen till vigselplatsen'
         '',
         'Söndag:',
         '12:00 - Frivillig gemensam lunch på'
